@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" width="100%" height="100%">
+  <!-- Background Warm Paper -->
+  <rect width="1200" height="750" fill="#FBF9F5" />
+
+  <!-- App Header -->
+  <rect width="1200" height="70" fill="#FFFFFF" stroke="#EAE6DF" />
+  <circle cx="32" cy="35" r="6" fill="#EF4444" />
+  <circle cx="52" cy="35" r="6" fill="#F59E0B" />
+  <circle cx="72" cy="35" r="6" fill="#10B981" />
+
+  <text x="110" y="42" fill="#1C1917" font-family="Georgia, serif" font-size="22" font-weight="700">CHRONICLE.</text>
+  <text x="500" y="41" fill="#78716C" font-family="sans-serif" font-size="13">Stories • Technology • Architecture • Essays</text>
+  <rect x="1050" y="20" width="100" height="30" rx="4" fill="#1C1917" />
+  <text x="1072" y="40" fill="#FFFFFF" font-family="sans-serif" font-size="12" font-weight="600">Subscribe</text>
+
+  <!-- Featured Article Hero -->
+  <g transform="translate(80, 110)">
+    <rect width="1040" height="580" rx="8" fill="#FFFFFF" stroke="#E7E5E4" />
+
+    <!-- Article Category & Date -->
+    <text x="40" y="55" fill="#14A800" font-family="sans-serif" font-size="12" font-weight="700" letter-spacing="1">SYSTEMS &amp; DESIGN • 5 MIN READ</text>
+    <text x="40" y="105" fill="#1C1917" font-family="Georgia, serif" font-size="34" font-weight="700">The Architecture of Zero-Overhead Web Platforms</text>
+    <text x="40" y="145" fill="#57534E" font-family="sans-serif" font-size="16" line-height="24">How modern frontend tooling and edge caching deliver lightning-fast page transitions without runtime penalty.</text>
+
+    <!-- Author block -->
+    <g transform="translate(40, 175)">
+      <circle cx="18" cy="18" r="18" fill="#D6D3D1" />
+      <text x="12" y="23" fill="#44403C" font-family="sans-serif" font-size="12" font-weight="bold">SB</text>
+      <text x="48" y="16" fill="#1C1917" font-family="sans-serif" font-size="13" font-weight="600">Shoaib B.</text>
+      <text x="48" y="32" fill="#78716C" font-family="sans-serif" font-size="11">Published on Chronicle Editorial</text>
+    </g>
+
+    <!-- Simulated Visual Content Grid -->
+    <g transform="translate(40, 240)">
+      <rect width="460" height="290" rx="6" fill="#F5F5F4" stroke="#E7E5E4" />
+      <text x="30" y="40" fill="#292524" font-family="sans-serif" font-size="16" font-weight="600">1. Incremental Static Regeneration</text>
+      <text x="30" y="70" fill="#57534E" font-family="sans-serif" font-size="13">Pages are pre-rendered at deploy time and revalidated in background when new content is published.</text>
+      <rect x="30" y="105" width="400" height="150" rx="4" fill="#1C1917" />
+      <text x="45" y="140" fill="#A8A29E" font-family="monospace" font-size="11">// Revalidation hook</text>
+      <text x="45" y="165" fill="#38BDF8" font-family="monospace" font-size="11">export const revalidate = 60;</text>
+      <text x="45" y="190" fill="#4ADE80" font-family="monospace" font-size="11">await res.revalidate('/chronicle/issue-18');</text>
+    </g>
+
+    <g transform="translate(540, 240)">
+      <rect width="460" height="290" rx="6" fill="#F5F5F4" stroke="#E7E5E4" />
+      <text x="30" y="40" fill="#292524" font-family="sans-serif" font-size="16" font-weight="600">2. Real-Time Reader Metrics</text>
+      <text x="30" y="70" fill="#57534E" font-family="sans-serif" font-size="13">Sub-second TTFB observed globally across North America and Europe edge nodes.</text>
+      <rect x="30" y="105" width="400" height="60" rx="4" fill="#FFFFFF" stroke="#E7E5E4" />
+      <text x="45" y="140" fill="#14A800" font-family="sans-serif" font-size="20" font-weight="700">38ms TTFB</text>
+      <text x="180" y="140" fill="#78716C" font-family="sans-serif" font-size="12">100/100 Lighthouse Performance</text>
+    </g>
+  </g>
+</svg>

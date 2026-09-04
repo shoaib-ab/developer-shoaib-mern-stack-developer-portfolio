@@ -1,0 +1,128 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F172A" />
+      <stop offset="100%" stop-color="#1E293B" />
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000" flood-opacity="0.25" />
+    </filter>
+  </defs>
+
+  <!-- Canvas -->
+  <rect width="1200" height="750" fill="url(#bgGrad)" />
+
+  <!-- App Header -->
+  <rect width="1200" height="60" fill="#0B1120" />
+  <circle cx="32" cy="30" r="6" fill="#EF4444" />
+  <circle cx="52" cy="30" r="6" fill="#F59E0B" />
+  <circle cx="72" cy="30" r="6" fill="#10B981" />
+
+  <text x="110" y="36" fill="#F8FAFC" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="700">Meridian</text>
+  <text x="195" y="36" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13">Workspace / Sprint 24 Board</text>
+
+  <!-- Header Right Actions -->
+  <rect x="940" y="16" width="110" height="30" rx="4" fill="#3B82F6" />
+  <text x="965" y="36" fill="#FFFFFF" font-family="sans-serif" font-size="13" font-weight="600">+ New Task</text>
+  <circle cx="1090" cy="31" r="16" fill="#475569" />
+  <text x="1083" y="36" fill="#E2E8F0" font-family="sans-serif" font-size="12" font-weight="600">SB</text>
+
+  <!-- Board Columns -->
+  <!-- Column 1: Backlog -->
+  <g transform="translate(40, 90)">
+    <rect width="260" height="620" rx="8" fill="#1E293B" opacity="0.7" />
+    <text x="16" y="32" fill="#E2E8F0" font-family="sans-serif" font-size="14" font-weight="700">Backlog</text>
+    <rect x="216" y="18" width="28" height="20" rx="10" fill="#334155" />
+    <text x="226" y="32" fill="#94A3B8" font-family="sans-serif" font-size="11" font-weight="600">3</text>
+
+    <!-- Card 1 -->
+    <g transform="translate(12, 50)" filter="url(#shadow)">
+      <rect width="236" height="110" rx="6" fill="#0F172A" stroke="#334155" />
+      <rect x="14" y="14" width="60" height="18" rx="3" fill="#1E3A8A" />
+      <text x="20" y="27" fill="#60A5FA" font-family="sans-serif" font-size="10" font-weight="700">FEATURE</text>
+      <text x="14" y="52" fill="#F8FAFC" font-family="sans-serif" font-size="13" font-weight="600">Custom OAuth Callback</text>
+      <text x="14" y="72" fill="#94A3B8" font-family="sans-serif" font-size="11">Support GitHub &amp; Google SSO</text>
+      <text x="14" y="96" fill="#64748B" font-family="sans-serif" font-size="10">Due in 2 days</text>
+    </g>
+
+    <!-- Card 2 -->
+    <g transform="translate(12, 175)" filter="url(#shadow)">
+      <rect width="236" height="95" rx="6" fill="#0F172A" stroke="#334155" />
+      <rect x="14" y="14" width="55" height="18" rx="3" fill="#312E81" />
+      <text x="20" y="27" fill="#A5B4FC" font-family="sans-serif" font-size="10" font-weight="700">INFRA</text>
+      <text x="14" y="52" fill="#F8FAFC" font-family="sans-serif" font-size="13" font-weight="600">Redis Cache Invalidation</text>
+      <text x="14" y="82" fill="#64748B" font-family="sans-serif" font-size="10">Sprint backlog</text>
+    </g>
+  </g>
+
+  <!-- Column 2: In Progress -->
+  <g transform="translate(325, 90)">
+    <rect width="260" height="620" rx="8" fill="#1E293B" opacity="0.7" />
+    <text x="16" y="32" fill="#E2E8F0" font-family="sans-serif" font-size="14" font-weight="700">In Progress</text>
+    <rect x="216" y="18" width="28" height="20" rx="10" fill="#3B82F6" />
+    <text x="226" y="32" fill="#FFFFFF" font-family="sans-serif" font-size="11" font-weight="700">2</text>
+
+    <!-- Card Active -->
+    <g transform="translate(12, 50)" filter="url(#shadow)">
+      <rect width="236" height="135" rx="6" fill="#0F172A" stroke="#3B82F6" stroke-width="1.5" />
+      <rect x="14" y="14" width="65" height="18" rx="3" fill="#065F46" />
+      <text x="20" y="27" fill="#34D399" font-family="sans-serif" font-size="10" font-weight="700">HIGH PRIO</text>
+      <text x="14" y="52" fill="#F8FAFC" font-family="sans-serif" font-size="13" font-weight="600">Zero-Dep Drag Physics</text>
+      <text x="14" y="72" fill="#94A3B8" font-family="sans-serif" font-size="11">Implement pointer events</text>
+      <rect x="14" y="88" width="208" height="6" rx="3" fill="#1E293B" />
+      <rect x="14" y="88" width="160" height="6" rx="3" fill="#10B981" />
+      <text x="14" y="118" fill="#10B981" font-family="sans-serif" font-size="11" font-weight="600">75% completed</text>
+    </g>
+
+    <!-- Card 2 -->
+    <g transform="translate(12, 200)" filter="url(#shadow)">
+      <rect width="236" height="100" rx="6" fill="#0F172A" stroke="#334155" />
+      <rect x="14" y="14" width="45" height="18" rx="3" fill="#7C2D12" />
+      <text x="20" y="27" fill="#FDBA74" font-family="sans-serif" font-size="10" font-weight="700">API</text>
+      <text x="14" y="52" fill="#F8FAFC" font-family="sans-serif" font-size="13" font-weight="600">Slack Webhook Alerts</text>
+      <text x="14" y="84" fill="#64748B" font-family="sans-serif" font-size="10">Assigned to Shoaib</text>
+    </g>
+  </g>
+
+  <!-- Column 3: Review -->
+  <g transform="translate(610, 90)">
+    <rect width="260" height="620" rx="8" fill="#1E293B" opacity="0.7" />
+    <text x="16" y="32" fill="#E2E8F0" font-family="sans-serif" font-size="14" font-weight="700">In Review</text>
+    <rect x="216" y="18" width="28" height="20" rx="10" fill="#334155" />
+    <text x="226" y="32" fill="#94A3B8" font-family="sans-serif" font-size="11" font-weight="600">1</text>
+
+    <!-- Card -->
+    <g transform="translate(12, 50)" filter="url(#shadow)">
+      <rect width="236" height="110" rx="6" fill="#0F172A" stroke="#334155" />
+      <rect x="14" y="14" width="60" height="18" rx="3" fill="#4C1D95" />
+      <text x="20" y="27" fill="#C4B5FD" font-family="sans-serif" font-size="10" font-weight="700">DATABASE</text>
+      <text x="14" y="52" fill="#F8FAFC" font-family="sans-serif" font-size="13" font-weight="600">PostgreSQL Migration</text>
+      <text x="14" y="72" fill="#94A3B8" font-family="sans-serif" font-size="11">Fractional indexing PR #42</text>
+      <text x="14" y="96" fill="#F59E0B" font-family="sans-serif" font-size="11">● Needs 1 approval</text>
+    </g>
+  </g>
+
+  <!-- Column 4: Completed -->
+  <g transform="translate(895, 90)">
+    <rect width="265" height="620" rx="8" fill="#1E293B" opacity="0.7" />
+    <text x="16" y="32" fill="#E2E8F0" font-family="sans-serif" font-size="14" font-weight="700">Completed</text>
+    <rect x="221" y="18" width="28" height="20" rx="10" fill="#059669" />
+    <text x="227" y="32" fill="#FFFFFF" font-family="sans-serif" font-size="11" font-weight="700">12</text>
+
+    <!-- Card Done 1 -->
+    <g transform="translate(12, 50)" opacity="0.85">
+      <rect width="241" height="90" rx="6" fill="#0F172A" stroke="#059669" />
+      <text x="14" y="34" fill="#34D399" font-family="sans-serif" font-size="11" font-weight="700">✓ SHIPPED</text>
+      <text x="14" y="56" fill="#E2E8F0" font-family="sans-serif" font-size="13" font-weight="600">Dynamic Board Filtering</text>
+      <text x="14" y="76" fill="#64748B" font-family="sans-serif" font-size="10">Released to production</text>
+    </g>
+
+    <!-- Card Done 2 -->
+    <g transform="translate(12, 155)" opacity="0.85">
+      <rect width="241" height="90" rx="6" fill="#0F172A" stroke="#334155" />
+      <text x="14" y="34" fill="#94A3B8" font-family="sans-serif" font-size="11" font-weight="700">✓ CLOSED</text>
+      <text x="14" y="56" fill="#E2E8F0" font-family="sans-serif" font-size="13" font-weight="600">Keyboard Shortcuts</text>
+      <text x="14" y="76" fill="#64748B" font-family="sans-serif" font-size="10">ESC and Enter bindings</text>
+    </g>
+  </g>
+</svg>

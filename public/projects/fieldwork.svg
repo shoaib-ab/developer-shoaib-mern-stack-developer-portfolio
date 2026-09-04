@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" width="100%" height="100%">
+  <defs>
+    <linearGradient id="mapBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#064E3B" />
+      <stop offset="100%" stop-color="#022C22" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="750" fill="#061E17" />
+
+  <!-- App Header -->
+  <rect width="1200" height="60" fill="#022C22" stroke="#064E3B" />
+  <circle cx="32" cy="30" r="6" fill="#EF4444" />
+  <circle cx="52" cy="30" r="6" fill="#F59E0B" />
+  <circle cx="72" cy="30" r="6" fill="#10B981" />
+
+  <text x="110" y="36" fill="#34D399" font-family="sans-serif" font-size="16" font-weight="700">Fieldwork PWA</text>
+  <text x="240" y="36" fill="#6EE7B7" font-family="sans-serif" font-size="13">Logistics Dispatch &amp; Offline Route Inspection</text>
+
+  <rect x="980" y="16" width="180" height="28" rx="14" fill="#047857" />
+  <circle cx="998" cy="30" r="5" fill="#A7F3D0" />
+  <text x="1014" y="35" fill="#FFFFFF" font-family="sans-serif" font-size="12" font-weight="600">OFFLINE READY: 100%</text>
+
+  <!-- Left Sidebar (Routes & Inspection Form) -->
+  <rect y="60" width="340" height="690" fill="#042F24" />
+  <g transform="translate(24, 90)">
+    <text x="0" y="0" fill="#6EE7B7" font-family="sans-serif" font-size="12" font-weight="700">ACTIVE DISPATCH ROUTE #402</text>
+    <text x="0" y="24" fill="#A7F3D0" font-family="sans-serif" font-size="16" font-weight="700">North Metro Logistics Hub</text>
+
+    <!-- Inspection item 1 -->
+    <g transform="translate(0, 50)">
+      <rect width="292" height="75" rx="6" fill="#064E3B" stroke="#059669" />
+      <circle cx="24" cy="37" r="10" fill="#10B981" />
+      <text x="20" y="41" fill="#FFF" font-family="sans-serif" font-size="12" font-weight="bold">✓</text>
+      <text x="46" y="32" fill="#F0FDF4" font-family="sans-serif" font-size="13" font-weight="600">Warehouse Dock 4A</text>
+      <text x="46" y="52" fill="#A7F3D0" font-family="sans-serif" font-size="11">Completed at 09:24 AM</text>
+    </g>
+
+    <!-- Inspection item 2 -->
+    <g transform="translate(0, 140)">
+      <rect width="292" height="85" rx="6" fill="#065F46" stroke="#34D399" stroke-width="1.5" />
+      <circle cx="24" cy="42" r="10" fill="#F59E0B" />
+      <text x="21" y="46" fill="#FFF" font-family="sans-serif" font-size="11" font-weight="bold">●</text>
+      <text x="46" y="34" fill="#FFFFFF" font-family="sans-serif" font-size="13" font-weight="700">Distribution Center B</text>
+      <text x="46" y="54" fill="#F0FDF4" font-family="sans-serif" font-size="11">Current checkpoint • 14 items</text>
+      <text x="46" y="72" fill="#34D399" font-family="sans-serif" font-size="10" font-weight="bold">IN PROGRESS</text>
+    </g>
+
+    <!-- Inspection item 3 -->
+    <g transform="translate(0, 240)">
+      <rect width="292" height="75" rx="6" fill="#064E3B" opacity="0.6" />
+      <circle cx="24" cy="37" r="10" fill="#047857" />
+      <text x="20" y="41" fill="#A7F3D0" font-family="sans-serif" font-size="12">3</text>
+      <text x="46" y="32" fill="#D1FAE5" font-family="sans-serif" font-size="13" font-weight="600">Terminal 9 Gateway</text>
+      <text x="46" y="52" fill="#6EE7B7" font-family="sans-serif" font-size="11">Next stop • ETA 11:15 AM</text>
+    </g>
+  </g>
+
+  <!-- Interactive Map Canvas Area -->
+  <g transform="translate(340, 60)">
+    <!-- Simulated Map Grid -->
+    <rect width="860" height="690" fill="#022C22" />
+    <path d="M0,150 Q200,120 400,280 T860,350" stroke="#064E3B" stroke-width="32" fill="none" opacity="0.4" />
+    <path d="M120,0 L250,690" stroke="#064E3B" stroke-width="24" fill="none" opacity="0.3" />
+    <path d="M600,0 L520,690" stroke="#064E3B" stroke-width="20" fill="none" opacity="0.3" />
+
+    <!-- Route Line -->
+    <path d="M150,420 L280,310 L480,240 L650,380" stroke="#10B981" stroke-width="6" stroke-dasharray="8,6" fill="none" />
+
+    <!-- Map Pins -->
+    <!-- Pin 1 -->
+    <circle cx="150" cy="420" r="14" fill="#059669" stroke="#A7F3D0" stroke-width="3" />
+    <circle cx="150" cy="420" r="5" fill="#FFF" />
+    <rect x="110" y="445" width="80" height="24" rx="4" fill="#064E3B" />
+    <text x="122" y="461" fill="#A7F3D0" font-family="sans-serif" font-size="11" font-weight="bold">Dock 4A</text>
+
+    <!-- Pin 2 (Active) -->
+    <circle cx="480" cy="240" r="20" fill="#F59E0B" opacity="0.3" />
+    <circle cx="480" cy="240" r="14" fill="#D97706" stroke="#FEF3C7" stroke-width="3" />
+    <circle cx="480" cy="240" r="5" fill="#FFF" />
+    <rect x="420" y="195" width="120" height="32" rx="6" fill="#042F24" stroke="#F59E0B" stroke-width="1.5" />
+    <text x="432" y="215" fill="#FFFFFF" font-family="sans-serif" font-size="12" font-weight="bold">Center B (Current)</text>
+
+    <!-- Pin 3 -->
+    <circle cx="650" cy="380" r="14" fill="#047857" stroke="#6EE7B7" stroke-width="3" />
+    <circle cx="650" cy="380" r="5" fill="#FFF" />
+    <rect x="610" y="405" width="80" height="24" rx="4" fill="#064E3B" />
+    <text x="622" y="421" fill="#A7F3D0" font-family="sans-serif" font-size="11" font-weight="bold">Terminal 9</text>
+  </g>
+</svg>

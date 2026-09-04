@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" width="100%" height="100%">
+  <!-- Background -->
+  <rect width="1200" height="750" fill="#0A0F1D" />
+
+  <!-- App Header -->
+  <rect width="1200" height="60" fill="#0F172A" stroke="#1E293B" />
+  <circle cx="32" cy="30" r="6" fill="#EF4444" />
+  <circle cx="52" cy="30" r="6" fill="#F59E0B" />
+  <circle cx="72" cy="30" r="6" fill="#10B981" />
+
+  <text x="110" y="36" fill="#818CF8" font-family="sans-serif" font-size="16" font-weight="700">Ledger API</text>
+  <text x="215" y="36" fill="#94A3B8" font-family="sans-serif" font-size="13">Double-Entry Financial Accounting Core</text>
+
+  <rect x="1000" y="16" width="160" height="28" rx="14" fill="#1E1B4B" stroke="#4338CA" />
+  <circle cx="1018" cy="30" r="4" fill="#818CF8" />
+  <text x="1030" y="35" fill="#C7D2FE" font-family="sans-serif" font-size="11" font-weight="600">AUDIT BALANCED</text>
+
+  <!-- Metric Strip -->
+  <g transform="translate(50, 90)">
+    <rect width="250" height="90" rx="8" fill="#111827" stroke="#1F2937" />
+    <text x="20" y="30" fill="#9CA3AF" font-family="sans-serif" font-size="12" font-weight="600">TOTAL VOLUME (USD)</text>
+    <text x="20" y="65" fill="#F9FAFB" font-family="sans-serif" font-size="24" font-weight="700">$4,850,290.00</text>
+
+    <g transform="translate(280, 0)">
+      <rect width="250" height="90" rx="8" fill="#111827" stroke="#1F2937" />
+      <text x="20" y="30" fill="#9CA3AF" font-family="sans-serif" font-size="12" font-weight="600">TRANSACTION RATE</text>
+      <text x="20" y="65" fill="#F9FAFB" font-family="sans-serif" font-size="24" font-weight="700">1,500 TPS</text>
+      <text x="150" y="65" fill="#10B981" font-family="sans-serif" font-size="12" font-weight="600">Sub-4ms</text>
+    </g>
+
+    <g transform="translate(560, 0)">
+      <rect width="250" height="90" rx="8" fill="#111827" stroke="#1F2937" />
+      <text x="20" y="30" fill="#9CA3AF" font-family="sans-serif" font-size="12" font-weight="600">SUPPORTED CURRENCIES</text>
+      <text x="20" y="65" fill="#F9FAFB" font-family="sans-serif" font-size="24" font-weight="700">32 ISO Codes</text>
+    </g>
+
+    <g transform="translate(840, 0)">
+      <rect width="260" height="90" rx="8" fill="#111827" stroke="#1F2937" />
+      <text x="20" y="30" fill="#9CA3AF" font-family="sans-serif" font-size="12" font-weight="600">RECONCILIATION RATE</text>
+      <text x="20" y="65" fill="#10B981" font-family="sans-serif" font-size="24" font-weight="700">100.00%</text>
+    </g>
+  </g>
+
+  <!-- Ledger Transaction Table -->
+  <g transform="translate(50, 215)">
+    <rect width="1100" height="480" rx="8" fill="#111827" stroke="#1F2937" />
+
+    <!-- Table Header -->
+    <rect width="1100" height="45" rx="8" fill="#1F2937" />
+    <text x="24" y="28" fill="#9CA3AF" font-family="monospace" font-size="12" font-weight="600">TX HASH</text>
+    <text x="240" y="28" fill="#9CA3AF" font-family="monospace" font-size="12" font-weight="600">DEBIT ACCOUNT</text>
+    <text x="460" y="28" fill="#9CA3AF" font-family="monospace" font-size="12" font-weight="600">CREDIT ACCOUNT</text>
+    <text x="680" y="28" fill="#9CA3AF" font-family="monospace" font-size="12" font-weight="600">AMOUNT</text>
+    <text x="840" y="28" fill="#9CA3AF" font-family="monospace" font-size="12" font-weight="600">STATUS</text>
+    <text x="980" y="28" fill="#9CA3AF" font-family="monospace" font-size="12" font-weight="600">TIMESTAMP</text>
+
+    <!-- Row 1 -->
+    <g transform="translate(0, 45)">
+      <rect width="1100" height="55" fill="#111827" />
+      <text x="24" y="34" fill="#818CF8" font-family="monospace" font-size="12">0x9f4a...21d8</text>
+      <text x="240" y="34" fill="#F3F4F6" font-family="sans-serif" font-size="13">merchant_payout_escrow</text>
+      <text x="460" y="34" fill="#F3F4F6" font-family="sans-serif" font-size="13">acct_chase_reserve</text>
+      <text x="680" y="34" fill="#10B981" font-family="monospace" font-size="13" font-weight="700">+$14,250.00 USD</text>
+      <rect x="840" y="16" width="75" height="24" rx="4" fill="#064E3B" />
+      <text x="852" y="32" fill="#34D399" font-family="sans-serif" font-size="11" font-weight="bold">SETTLED</text>
+      <text x="980" y="34" fill="#6B7280" font-family="sans-serif" font-size="12">Just now</text>
+    </g>
+
+    <!-- Row 2 -->
+    <g transform="translate(0, 100)">
+      <rect width="1100" height="55" fill="#161F30" />
+      <text x="24" y="34" fill="#818CF8" font-family="monospace" font-size="12">0x3b1c...99a4</text>
+      <text x="240" y="34" fill="#F3F4F6" font-family="sans-serif" font-size="13">client_subscription_fee</text>
+      <text x="460" y="34" fill="#F3F4F6" font-family="sans-serif" font-size="13">revenue_saas_primary</text>
+      <text x="680" y="34" fill="#F3F4F6" font-family="monospace" font-size="13" font-weight="700">+$890.00 EUR</text>
+      <rect x="840" y="16" width="75" height="24" rx="4" fill="#064E3B" />
+      <text x="852" y="32" fill="#34D399" font-family="sans-serif" font-size="11" font-weight="bold">SETTLED</text>
+      <text x="980" y="34" fill="#6B7280" font-family="sans-serif" font-size="12">2m ago</text>
+    </g>
+
+    <!-- Row 3 -->
+    <g transform="translate(0, 155)">
+      <rect width="1100" height="55" fill="#111827" />
+      <text x="24" y="34" fill="#818CF8" font-family="monospace" font-size="12">0x7c98...e102</text>
+      <text x="240" y="34" fill="#F3F4F6" font-family="sans-serif" font-size="13">gateway_stripe_settle</text>
+      <text x="460" y="34" fill="#F3F4F6" font-family="sans-serif" font-size="13">operating_vault_gbp</text>
+      <text x="680" y="34" fill="#10B981" font-family="monospace" font-size="13" font-weight="700">+$54,120.00 GBP</text>
+      <rect x="840" y="16" width="75" height="24" rx="4" fill="#064E3B" />
+      <text x="852" y="32" fill="#34D399" font-family="sans-serif" font-size="11" font-weight="bold">SETTLED</text>
+      <text x="980" y="34" fill="#6B7280" font-family="sans-serif" font-size="12">14m ago</text>
+    </g>
+  </g>
+</svg>

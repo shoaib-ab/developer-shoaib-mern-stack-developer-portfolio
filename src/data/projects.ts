@@ -1,158 +1,224 @@
 export interface Project {
-  num: string
-  name: string
+  id: string
+  title: string
+  category: "Full-Stack" | "Frontend" | "API & Backend"
   year: string
-  category: string
+  featured: boolean
   description: string
-  longDescription?: string
-  outcomeLine: string
-  defaultTech: string[]
-  tech: string[]
-  role: string
-  featured?: boolean
-  mockupBg?: string
+  about: string
+  features: string[]
+  tags: string[]
+  image: string
+  liveUrl?: string
+  githubUrl?: string
 }
 
 export const ALL_PROJECTS: Project[] = [
   {
-    num: "001",
-    name: "Nexus Commerce",
+    id: "nexus-commerce",
+    title: "Nexus Commerce",
+    category: "Full-Stack",
     year: "2024",
-    category: "E-commerce",
     featured: true,
-    outcomeLine: "Engineered high-concurrency API handling 10k+ active sellers with sub-200ms response times.",
-    defaultTech: ["Next.js", "TypeScript", "Stripe"],
-    mockupBg: "linear-gradient(135deg, #1e293b 0%, #0f172a 100%)",
     description:
-      "Full-stack e-commerce platform with real-time inventory management, multi-vendor support, and integrated payment processing. Engineered to handle thousands of concurrent users with sub-200ms API response times.",
-    longDescription:
-      "A complete commerce infrastructure built from the ground up. Includes a seller dashboard, buyer storefront, order management system, and an internal analytics panel. Stripe handles payments; Redis powers cart sessions and rate limiting.",
-    tech: ["Next.js", "TypeScript", "Node.js", "MongoDB", "Stripe", "Redis"],
-    role: "Lead Full-Stack Engineer",
+      "A complete multi-vendor online store with product catalogs, shopping cart, customer checkout via Stripe, and a real-time merchant dashboard.",
+    about:
+      "Nexus Commerce is an end-to-end e-commerce platform built to support multiple independent sellers. It features a fast customer storefront, secure checkout powered by Stripe, and a seller management portal where merchants can list items, track orders, and view sales performance.",
+    features: [
+      "Multi-vendor product management with image uploads and category filtering",
+      "Secure payment processing with Stripe Checkout and automated webhook reconciliation",
+      "Real-time inventory decrementing and out-of-stock guards",
+      "Seller analytics dashboard showing revenue, order volume, and top products",
+    ],
+    tags: ["Next.js", "TypeScript", "Stripe", "Node.js", "MongoDB", "Tailwind CSS"],
+    image: "/projects/nexus-commerce.jpg",
+    liveUrl: "https://nexus-commerce.example.com",
+    githubUrl: "https://github.com/shoaib/nexus-commerce",
   },
   {
-    num: "002",
-    name: "Forma CMS",
+    id: "forma-cms",
+    title: "Forma CMS",
+    category: "Full-Stack",
     year: "2023",
-    category: "CMS",
     featured: true,
-    outcomeLine: "Unified multi-CMS content delivery across 5 enterprise platforms via a single API gateway.",
-    defaultTech: ["React", "Strapi", "TypeScript"],
-    mockupBg: "linear-gradient(135deg, #18181b 0%, #27272a 100%)",
     description:
-      "Headless content management system built on Strapi with a custom React admin interface. Powers content delivery for five client platforms through a unified REST API layer with granular permission controls.",
-    longDescription:
-      "Designed to replace a fragmented multi-CMS workflow for a digital agency. A single Strapi backend serves structured content to five distinct frontends via a shared API gateway. Custom plugins handle media transforms and scheduled publishing.",
-    tech: ["React", "TypeScript", "Strapi", "Node.js", "PostgreSQL"],
-    role: "Full-Stack Developer",
+      "A headless content management platform that allows marketing teams to create, organize, and publish articles across web apps via clean REST APIs.",
+    about:
+      "Forma CMS was built to simplify content publishing for digital teams. Instead of managing separate blogs and landing page content across multiple websites, editors can write in a clean visual admin dashboard while developers fetch structured JSON content through a fast API.",
+    features: [
+      "Custom content schema builder for blog posts, landing pages, and author profiles",
+      "Draft vs. Published workflow with instant preview before releasing live",
+      "Automated image optimization and responsive media delivery",
+      "Granular role permissions for authors, editors, and administrators",
+    ],
+    tags: ["React", "TypeScript", "Strapi", "Node.js", "PostgreSQL"],
+    image: "/projects/forma-cms.jpg",
+    liveUrl: "https://forma-cms.example.com",
+    githubUrl: "https://github.com/shoaib/forma-cms",
   },
   {
-    num: "003",
-    name: "Pulse Analytics",
+    id: "pulse-analytics",
+    title: "Pulse Analytics",
+    category: "Full-Stack",
     year: "2023",
-    category: "Dashboard",
     featured: true,
-    outcomeLine: "Real-time analytics engine visualising live telemetry streams with sub-second WebSocket latency.",
-    defaultTech: ["Next.js", "Express", "WebSocket"],
-    mockupBg: "linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%)",
     description:
-      "Real-time analytics dashboard for monitoring application performance and user behaviour. Processes and visualises live data streams with sub-second latency using WebSocket connections.",
-    longDescription:
-      "Built for an internal team tracking SaaS product metrics. An Express server aggregates events from client SDKs, stores them in MongoDB with time-based indices, and pushes live updates to a Next.js dashboard over WebSockets.",
-    tech: ["Next.js", "TypeScript", "Express", "WebSocket", "MongoDB"],
-    role: "Full-Stack Engineer",
+      "A real-time analytics web dashboard that monitors website traffic, page visits, and user events as they happen using live WebSockets.",
+    about:
+      "Pulse Analytics provides privacy-focused, real-time website analytics. It collects visitor events through a lightweight tracking snippet and visualizes page views, user locations, referral sources, and active sessions on an interactive dashboard with live streaming updates.",
+    features: [
+      "Live visitor counter and active session monitoring via WebSockets",
+      "Interactive charts for daily page views, top referrers, and popular pages",
+      "Lightweight tracking script under 5KB with zero cookie requirements",
+      "Fast data querying with time-series indexing in MongoDB",
+    ],
+    tags: ["Next.js", "TypeScript", "Express", "WebSocket", "MongoDB"],
+    image: "/projects/pulse-analytics.jpg",
+    liveUrl: "https://pulse-analytics.example.com",
+    githubUrl: "https://github.com/shoaib/pulse-analytics",
   },
   {
-    num: "004",
-    name: "Ark Auth",
+    id: "ark-auth",
+    title: "Ark Auth",
+    category: "API & Backend",
     year: "2023",
-    category: "Infrastructure",
-    outcomeLine: "Standalone microservice with JWT rotation, OAuth 2.0, and self-service account management.",
-    defaultTech: ["Node.js", "TypeScript", "JWT"],
-    mockupBg: "linear-gradient(135deg, #172554 0%, #1e3a8a 100%)",
+    featured: false,
     description:
-      "Standalone authentication service with JWT and refresh token rotation, OAuth 2.0 integration, and a self-service account management portal. Drop-in for any Node.js application.",
-    tech: ["Node.js", "Express", "TypeScript", "MongoDB", "JWT"],
-    role: "Backend Engineer",
+      "A plug-and-play authentication microservice providing email login, Google/GitHub OAuth, secure JWT sessions, and user account management.",
+    about:
+      "Ark Auth is a reusable backend authentication service designed to drop into any new web application. It handles secure password hashing, OAuth login providers, token expiration, and email password resets with robust security standards.",
+    features: [
+      "OAuth 2.0 social sign-in integration with Google and GitHub",
+      "Secure JWT token issuance with automatic sliding refresh tokens",
+      "Brute-force protection and IP-based rate limiting on sensitive routes",
+      "Self-service password reset and email verification workflows",
+    ],
+    tags: ["Node.js", "TypeScript", "Express", "JWT", "MongoDB"],
+    image: "/projects/ark-auth.svg",
+    githubUrl: "https://github.com/shoaib/ark-auth",
   },
   {
-    num: "005",
-    name: "Meridian",
+    id: "meridian",
+    title: "Meridian",
+    category: "Full-Stack",
     year: "2022",
-    category: "SaaS",
-    outcomeLine: "Project management SaaS featuring a custom 0-dependency drag-and-drop Kanban engine.",
-    defaultTech: ["React", "Node.js", "PostgreSQL"],
-    mockupBg: "linear-gradient(135deg, #0c4a6e 0%, #0369a1 100%)",
+    featured: false,
     description:
-      "Project management SaaS with Kanban boards, time tracking, and Slack integration. Built a custom drag-and-drop engine without external DnD libraries to keep the bundle minimal.",
-    tech: ["React", "TypeScript", "Node.js", "PostgreSQL", "Slack API"],
-    role: "Full-Stack Developer",
+      "An agile project management tool with drag-and-drop Kanban boards, sprint task tracking, and automated Slack notifications.",
+    about:
+      "Meridian is a focused task management app for software development teams. Teams can organize sprints across customizable Kanban columns, assign tasks to members, set deadlines, and receive Slack updates when issues move to code review or completion.",
+    features: [
+      "Smooth drag-and-drop task reordering across Kanban columns",
+      "Custom board filters by assignee, priority label, and sprint deadline",
+      "Instant Slack notifications when tasks are moved or comments are added",
+      "Clean, distraction-free user interface with dark mode support",
+    ],
+    tags: ["React", "TypeScript", "Node.js", "PostgreSQL", "Slack API"],
+    image: "/projects/meridian.svg",
+    liveUrl: "https://meridian-app.example.com",
+    githubUrl: "https://github.com/shoaib/meridian",
   },
   {
-    num: "006",
-    name: "Fieldwork",
+    id: "fieldwork",
+    title: "Fieldwork",
+    category: "Frontend",
     year: "2022",
-    category: "Mobile Web",
-    outcomeLine: "Offline-first PWA for field logistics teams with background sync & Mapbox dispatch tracking.",
-    defaultTech: ["React", "MongoDB", "Mapbox"],
-    mockupBg: "linear-gradient(135deg, #064e3b 0%, #047857 100%)",
+    featured: false,
     description:
-      "Field data collection app for a logistics company. Progressive web app with offline-first architecture, background sync, and live map tracking for dispatch teams.",
-    tech: ["React", "TypeScript", "Express", "MongoDB", "Mapbox", "PWA"],
-    role: "Full-Stack Developer",
+      "An offline-first progressive web app for field inspectors to log checklist data and view delivery routes without internet access.",
+    about:
+      "Built for logistics drivers and field workers operating in areas with poor cellular coverage. The app stores all inspection forms and route checkpoints locally on the device and automatically syncs them with the central database as soon as a connection is restored.",
+    features: [
+      "Full offline support using IndexedDB and Service Worker caching",
+      "Automatic background data synchronization when back online",
+      "Interactive map routes and GPS pin drop using Mapbox GL",
+      "Camera photo attachment with client-side compression",
+    ],
+    tags: ["React", "TypeScript", "PWA", "Mapbox", "IndexedDB"],
+    image: "/projects/fieldwork.svg",
+    liveUrl: "https://fieldwork.example.com",
   },
   {
-    num: "007",
-    name: "Ledger API",
+    id: "ledger-api",
+    title: "Ledger API",
+    category: "API & Backend",
     year: "2022",
-    category: "API",
-    outcomeLine: "Double-entry accounting transaction engine ensuring audit compliance under concurrent writes.",
-    defaultTech: ["Node.js", "PostgreSQL", "Express"],
-    mockupBg: "linear-gradient(135deg, #312e81 0%, #4338ca 100%)",
+    featured: false,
     description:
-      "Financial transaction API with double-entry bookkeeping logic, multi-currency support, and audit logging. Designed for accuracy under concurrent write operations.",
-    tech: ["Node.js", "TypeScript", "PostgreSQL", "Express"],
-    role: "Backend Engineer",
+      "A financial accounting API built with double-entry bookkeeping rules to record multi-currency payments, fees, and client balances accurately.",
+    about:
+      "A critical backend service created to handle financial balance tracking for a billing platform. It strictly enforces double-entry accounting principles (every debit must equal an equal credit) to eliminate rounding errors and maintain a verifiable audit trail.",
+    features: [
+      "Strict double-entry validation preventing unbalanced transactions",
+      "Multi-currency support with automated exchange rate conversion",
+      "Immutable transaction log with tamper-evident audit history",
+      "Exportable balance sheet and account statement reporting endpoints",
+    ],
+    tags: ["Node.js", "TypeScript", "PostgreSQL", "Express"],
+    image: "/projects/ledger-api.svg",
+    githubUrl: "https://github.com/shoaib/ledger-api",
   },
   {
-    num: "008",
-    name: "Chronicle",
+    id: "chronicle",
+    title: "Chronicle",
+    category: "Frontend",
     year: "2021",
-    category: "CMS",
-    outcomeLine: "Editorial CMS with custom Strapi rich-text workflow and static-site build pipeline.",
-    defaultTech: ["Next.js", "Strapi", "Node.js"],
-    mockupBg: "linear-gradient(135deg, #27272a 0%, #3f3f46 100%)",
+    featured: false,
     description:
-      "Blog and editorial platform with a rich-text editor, author management, and static-site generation. Content is authored in a custom Strapi instance and built to static HTML at deploy time.",
-    tech: ["Next.js", "Strapi", "TypeScript", "Node.js"],
-    role: "Full-Stack Developer",
+      "A clean editorial blog and reading platform with markdown authoring, category filtering, and ultra-fast static page delivery.",
+    about:
+      "Chronicle is a minimalist digital magazine built for tech writers. It features a typography-first reading experience, custom dark/light theme toggle, and pre-rendered static pages that load in milliseconds on mobile and desktop devices.",
+    features: [
+      "Markdown editor with syntax highlighting for code snippets",
+      "Estimated reading time calculator and social share previews",
+      "Static page generation for instant page loading and strong SEO rankings",
+      "Newsletter subscription form integration",
+    ],
+    tags: ["Next.js", "TypeScript", "Tailwind CSS", "Strapi"],
+    image: "/projects/chronicle.svg",
+    liveUrl: "https://chronicle-mag.example.com",
   },
   {
-    num: "009",
-    name: "Roster",
+    id: "roster",
+    title: "Roster",
+    category: "Full-Stack",
     year: "2021",
-    category: "Dashboard",
-    outcomeLine: "Multi-tenant business scheduling software with automated conflict detection & shift templates.",
-    defaultTech: ["React", "Express", "MongoDB"],
-    mockupBg: "linear-gradient(135deg, #1e1b4b 0%, #312e81 100%)",
+    featured: false,
     description:
-      "Team scheduling tool for small businesses. Calendar view, shift templates, and automated conflict detection. Deployed as a multi-tenant application with isolated data per organisation.",
-    tech: ["React", "Node.js", "Express", "MongoDB"],
-    role: "Full-Stack Developer",
+      "A staff shift planning tool for small businesses to create weekly schedules, manage time-off requests, and prevent booking overlaps.",
+    about:
+      "Roster replaced complicated paper and spreadsheet schedules for local service businesses. Managers can visually plan weekly shifts on a clear timeline calendar, and employees get automated notifications whenever their schedule changes.",
+    features: [
+      "Weekly timeline calendar view with drag-and-drop shift assignment",
+      "Automatic conflict detection that warns against double-booking staff",
+      "Time-off request and manager approval workflow",
+      "SMS and email schedule reminders sent to team members",
+    ],
+    tags: ["React", "Node.js", "Express", "MongoDB"],
+    image: "/projects/roster.svg",
+    liveUrl: "https://roster-shifts.example.com",
   },
   {
-    num: "010",
-    name: "Dispatch",
+    id: "dispatch",
+    title: "Dispatch",
+    category: "API & Backend",
     year: "2020",
-    category: "API",
-    outcomeLine: "Notification microservice wrapping SendGrid & Twilio APIs with auto-retries and delivery tracking.",
-    defaultTech: ["Node.js", "SendGrid", "Twilio"],
-    mockupBg: "linear-gradient(135deg, #451a03 0%, #78350f 100%)",
+    featured: false,
     description:
-      "Transactional email and SMS notification service built as an internal microservice. Wraps SendGrid and Twilio under a single API surface with templating, retry logic, and delivery tracking.",
-    tech: ["Node.js", "Express", "MongoDB", "SendGrid", "Twilio"],
-    role: "Backend Developer",
+      "A notification microservice that sends automated transactional emails and SMS alerts through SendGrid and Twilio with retry queues.",
+    about:
+      "An internal messaging hub that standardizes how web applications send notifications to users. By wrapping email and SMS providers in a single API, developers can send template-based emails or order alerts with automatic retries if a third-party vendor experiences downtime.",
+    features: [
+      "Single API endpoint for both email and SMS notifications",
+      "Automatic retry queue with exponential backoff on delivery failures",
+      "Dynamic template rendering with customizable user variables",
+      "Webhook delivery status tracking (delivered, opened, failed)",
+    ],
+    tags: ["Node.js", "Express", "MongoDB", "SendGrid", "Twilio"],
+    image: "/projects/dispatch.svg",
+    githubUrl: "https://github.com/shoaib/dispatch-service",
   },
 ]
 
-export const ALL_CATEGORIES = ["All", ...Array.from(new Set(ALL_PROJECTS.map((p) => p.category)))]
+export const CATEGORIES = ["All", "Full-Stack", "Frontend", "API & Backend"] as const
+export type ProjectCategory = (typeof CATEGORIES)[number]

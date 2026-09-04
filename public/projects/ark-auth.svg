@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" width="100%" height="100%">
+  <defs>
+    <linearGradient id="authBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090D16" />
+      <stop offset="100%" stop-color="#131D31" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="750" fill="url(#authBg)" />
+
+  <!-- App Header -->
+  <rect width="1200" height="60" fill="#0B132B" stroke="#1E293B" stroke-width="1" />
+  <circle cx="32" cy="30" r="6" fill="#EF4444" />
+  <circle cx="52" cy="30" r="6" fill="#F59E0B" />
+  <circle cx="72" cy="30" r="6" fill="#10B981" />
+
+  <text x="110" y="36" fill="#38BDF8" font-family="sans-serif" font-size="16" font-weight="700">Ark Auth</text>
+  <text x="195" y="36" fill="#64748B" font-family="sans-serif" font-size="13">Identity Service • Production v2.4</text>
+
+  <!-- Status pill -->
+  <rect x="1020" y="18" width="135" height="24" rx="12" fill="#064E3B" />
+  <circle cx="1036" cy="30" r="4" fill="#34D399" />
+  <text x="1048" y="34" fill="#A7F3D0" font-family="sans-serif" font-size="11" font-weight="600">RS256 GATEWAY OK</text>
+
+  <!-- Sidebar -->
+  <rect y="60" width="220" height="690" fill="#0D1527" border="#1E293B" />
+  <g transform="translate(24, 90)">
+    <text x="0" y="0" fill="#475569" font-family="sans-serif" font-size="10" font-weight="700">GENERAL</text>
+    <rect x="-8" y="12" width="190" height="34" rx="6" fill="#1E293B" />
+    <text x="12" y="34" fill="#F8FAFC" font-family="sans-serif" font-size="13" font-weight="600">OAuth Providers</text>
+
+    <text x="12" y="78" fill="#94A3B8" font-family="sans-serif" font-size="13">JWT Token Keys</text>
+    <text x="12" y="118" fill="#94A3B8" font-family="sans-serif" font-size="13">Active Sessions</text>
+    <text x="12" y="158" fill="#94A3B8" font-family="sans-serif" font-size="13">Rate Limiter</text>
+    <text x="12" y="198" fill="#94A3B8" font-family="sans-serif" font-size="13">Audit Trail</text>
+  </g>
+
+  <!-- Main Content -->
+  <g transform="translate(260, 90)">
+    <!-- Top Stat Row -->
+    <g>
+      <rect width="210" height="85" rx="6" fill="#131D31" stroke="#1E293B" />
+      <text x="16" y="28" fill="#64748B" font-family="sans-serif" font-size="11" font-weight="600">ACTIVE USERS</text>
+      <text x="16" y="60" fill="#F8FAFC" font-family="sans-serif" font-size="24" font-weight="700">42,850</text>
+      <text x="120" y="60" fill="#10B981" font-family="sans-serif" font-size="12" font-weight="600">+12.4%</text>
+    </g>
+
+    <g transform="translate(230, 0)">
+      <rect width="210" height="85" rx="6" fill="#131D31" stroke="#1E293B" />
+      <text x="16" y="28" fill="#64748B" font-family="sans-serif" font-size="11" font-weight="600">TOKEN VERIFIES / MIN</text>
+      <text x="16" y="60" fill="#F8FAFC" font-family="sans-serif" font-size="24" font-weight="700">8,420</text>
+      <text x="145" y="60" fill="#38BDF8" font-family="sans-serif" font-size="11">avg 2ms</text>
+    </g>
+
+    <g transform="translate(460, 0)">
+      <rect width="210" height="85" rx="6" fill="#131D31" stroke="#1E293B" />
+      <text x="16" y="28" fill="#64748B" font-family="sans-serif" font-size="11" font-weight="600">FAILED ATTEMPTS</text>
+      <text x="16" y="60" fill="#F8FAFC" font-family="sans-serif" font-size="24" font-weight="700">0.02%</text>
+      <text x="100" y="60" fill="#10B981" font-family="sans-serif" font-size="11">0 blocks</text>
+    </g>
+
+    <g transform="translate(690, 0)">
+      <rect width="200" height="85" rx="6" fill="#131D31" stroke="#1E293B" />
+      <text x="16" y="28" fill="#64748B" font-family="sans-serif" font-size="11" font-weight="600">UPTIME</text>
+      <text x="16" y="60" fill="#F8FAFC" font-family="sans-serif" font-size="24" font-weight="700">99.99%</text>
+    </g>
+
+    <!-- Provider Configurations -->
+    <g transform="translate(0, 110)">
+      <rect width="890" height="500" rx="8" fill="#131D31" stroke="#1E293B" />
+      <text x="24" y="38" fill="#F8FAFC" font-family="sans-serif" font-size="16" font-weight="700">Connected OAuth 2.0 Providers</text>
+      <text x="24" y="60" fill="#64748B" font-family="sans-serif" font-size="12">Manage third-party authentication credentials and scopes</text>
+
+      <!-- Provider 1: Google -->
+      <g transform="translate(24, 90)">
+        <rect width="842" height="70" rx="6" fill="#0D1527" stroke="#1E293B" />
+        <circle cx="36" cy="35" r="16" fill="#EA4335" />
+        <text x="31" y="40" fill="#FFF" font-family="sans-serif" font-size="14" font-weight="700">G</text>
+        <text x="68" y="32" fill="#F8FAFC" font-family="sans-serif" font-size="14" font-weight="600">Google OAuth</text>
+        <text x="68" y="50" fill="#64748B" font-family="sans-serif" font-size="11">Client ID: 9401...apps.googleusercontent.com</text>
+        <rect x="740" y="22" width="80" height="26" rx="13" fill="#065F46" />
+        <text x="760" y="39" fill="#34D399" font-family="sans-serif" font-size="11" font-weight="600">Active</text>
+      </g>
+
+      <!-- Provider 2: GitHub -->
+      <g transform="translate(24, 175)">
+        <rect width="842" height="70" rx="6" fill="#0D1527" stroke="#1E293B" />
+        <circle cx="36" cy="35" r="16" fill="#24292E" />
+        <text x="30" y="40" fill="#FFF" font-family="sans-serif" font-size="14" font-weight="700">GH</text>
+        <text x="68" y="32" fill="#F8FAFC" font-family="sans-serif" font-size="14" font-weight="600">GitHub Enterprise</text>
+        <text x="68" y="50" fill="#64748B" font-family="sans-serif" font-size="11">OAuth App ID: d7841b98c1992e</text>
+        <rect x="740" y="22" width="80" height="26" rx="13" fill="#065F46" />
+        <text x="760" y="39" fill="#34D399" font-family="sans-serif" font-size="11" font-weight="600">Active</text>
+      </g>
+
+      <!-- Provider 3: JWT Session Rotation -->
+      <g transform="translate(24, 260)">
+        <rect width="842" height="120" rx="6" fill="#0D1527" stroke="#1E293B" />
+        <text x="24" y="32" fill="#F8FAFC" font-family="sans-serif" font-size="14" font-weight="600">JSON Web Token Rotation</text>
+        <text x="24" y="52" fill="#94A3B8" font-family="sans-serif" font-size="12">Sliding refresh tokens rotate automatically on each API request</text>
+
+        <rect x="24" y="70" width="794" height="34" rx="4" fill="#090D16" />
+        <text x="36" y="92" fill="#38BDF8" font-family="monospace" font-size="11">eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.payload.sig... [15-min TTL active]</text>
+      </g>
+    </g>
+  </g>
+</svg>

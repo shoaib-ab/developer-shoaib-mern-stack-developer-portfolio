@@ -183,3 +183,98 @@ html {
   text-transform: uppercase;
   color: #3D3C38;
 }
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0.7;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.drawer-slide-in {
+  animation: slideInRight 0.28s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* ─── Modal Zoom In & Out Animations ─── */
+@keyframes modalBackdropIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes modalBackdropOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+@keyframes modalZoomIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes modalZoomOut {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+}
+
+.modal-backdrop-in {
+  animation: modalBackdropIn 0.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.modal-backdrop-out {
+  animation: modalBackdropOut 0.18s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.modal-zoom-in {
+  animation: modalZoomIn 0.22s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  will-change: transform, opacity;
+  transform-origin: center center;
+}
+
+.modal-zoom-out {
+  animation: modalZoomOut 0.18s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  will-change: transform, opacity;
+  transform-origin: center center;
+}
+
+/* ─── Aesthetic Card & Element Micro-Animations ─── */
+@keyframes cardFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.card-fade-in {
+  animation: cardFadeIn 0.35s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.project-card-interactive {
+  transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.28s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.2s ease;
+}
+
+.project-card-interactive:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 36px -8px rgba(17, 17, 16, 0.08), 0 4px 12px rgba(17, 17, 16, 0.03);
+}
