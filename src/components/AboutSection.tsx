@@ -1,16 +1,19 @@
-"use client"
-
 import { Divider } from "./Divider"
+import { ProfileData } from "@/lib/types"
 
-const FRONTEND_TECH = ["React", "Next.js", "TypeScript"]
-const BACKEND_TECH = ["Node.js", "Express", "REST APIs"]
-const DATA_TOOLING_TECH = ["MongoDB", "PostgreSQL", "Strapi", "Git"]
+const FRONTEND_TECH = ["React.js", "Next.js", "TypeScript", "Tailwind CSS"]
+const BACKEND_TECH = ["Node.js", "Express.js", "Nest.js", "REST APIs"]
+const DATA_TOOLING_TECH = ["MongoDB", "Stripe", "AWS", "Git"]
 
 interface AboutSectionProps {
   sectionRef: (el: HTMLElement | null) => void
+  profile?: ProfileData
 }
 
-export function AboutSection({ sectionRef }: AboutSectionProps) {
+export function AboutSection({ sectionRef, profile }: AboutSectionProps) {
+  const headline = profile?.aboutHeadline || "Building software with care, precision, and production reliability."
+  const p1 = profile?.aboutParagraph1 || "I'm a Full-Stack Developer with several years of experience building production applications that serve real users. I work across the entire stack — from crafting precise, performant frontends to designing clean, maintainable backend systems."
+  const p2 = profile?.aboutParagraph2 || "My focus is on building things that last: scalable APIs, well-structured databases, and interfaces that don't get in the way. I care about code quality, clear architecture, and shipping work that holds up under real-world conditions."
   return (
     <section
       ref={sectionRef}
@@ -46,7 +49,7 @@ export function AboutSection({ sectionRef }: AboutSectionProps) {
               </div>
               <div>
                 <p className="font-mono text-2xl font-bold text-[#14A800]">
-                  10+
+                  15+
                 </p>
                 <p className="font-mono text-xs text-[#54534F] tracking-[0.05em] uppercase mt-1">
                   Shipped Projects
@@ -58,14 +61,10 @@ export function AboutSection({ sectionRef }: AboutSectionProps) {
           {/* Right Column: Bio Paragraphs + Categorized Tech Stack */}
           <div>
             <p className="text-[1.0625rem] text-[#111110] leading-[1.8] mb-6">
-              I&apos;m a Full-Stack Developer with several years of experience building production applications that
-              serve real users. I work across the entire stack — from crafting precise, performant frontends to
-              designing clean, maintainable backend systems.
+              {p1}
             </p>
             <p className="text-[1.0625rem] text-[#4A4945] leading-[1.8] mb-8">
-              My focus is on building things that last: scalable APIs, well-structured databases, and interfaces
-              that don&apos;t get in the way. I care about code quality, clear architecture, and shipping work that
-              holds up under real-world conditions.
+              {p2}
             </p>
 
             {/* Core Technologies grouped into 3 category rows */}

@@ -1,13 +1,12 @@
-"use client"
-
-import { EDUCATION } from "@/data/education"
+import { EDUCATION, EducationItem } from "@/data/education"
 import { Divider } from "./Divider"
 
 interface EducationSectionProps {
   sectionRef: (el: HTMLElement | null) => void
+  education?: EducationItem[]
 }
 
-export function EducationSection({ sectionRef }: EducationSectionProps) {
+export function EducationSection({ sectionRef, education = EDUCATION }: EducationSectionProps) {
   return (
     <section
       ref={sectionRef}
@@ -20,7 +19,7 @@ export function EducationSection({ sectionRef }: EducationSectionProps) {
           05 — Education
         </p>
         <div className="space-y-6">
-          {EDUCATION.map((item, i) => (
+          {education.map((item, i) => (
             <article key={item.degree} className="border-t border-[#E3E1DB] pt-6">
               <div className="flex flex-col md:flex-row md:items-baseline justify-between gap-2 mb-2">
                 <h3 className="job-title font-semibold tracking-tight text-[#111110]">

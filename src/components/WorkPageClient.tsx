@@ -6,21 +6,23 @@ import { ALL_PROJECTS, CATEGORIES, Project, ProjectCategory } from "@/data/proje
 import { ProjectCard } from "./ProjectCard"
 import { ProjectModal } from "./ProjectModal"
 
-export function WorkPageClient() {
+export function WorkPageClient({ initialProjects = ALL_PROJECTS }: { initialProjects?: Project[] }) {
   const [searchQuery, setSearchQuery] = useState("")
   const [activeCategory, setActiveCategory] = useState<ProjectCategory>("All")
   const [selectedProject, setSelectedProject] = useState<Project | null>(null)
 
+  const projects = initialProjects
+
   const categoryCounts = useMemo(() => {
-    const counts: Record<string, number> = { All: ALL_PROJECTS.length }
-    ALL_PROJECTS.forEach((p) => {
+    const counts: Record<string, number> = { All: projects.length }
+    projects.forEach((p) => {
       counts[p.category] = (counts[p.category] || 0) + 1
     })
     return counts
-  }, [])
+  }, [projects])
 
   const filteredProjects = useMemo(() => {
-    return ALL_PROJECTS.filter((p) => {
+    return projects.filter((p) => {
       const catOk = activeCategory === "All" || p.category === activeCategory
       const query = searchQuery.trim().toLowerCase()
       const searchOk =
@@ -52,7 +54,7 @@ export function WorkPageClient() {
           </Link>
 
           <span className="font-mono text-xs text-[#54534F]">
-            <span className="text-[#111110] font-semibold">{filteredProjects.length}</span> of {ALL_PROJECTS.length} projects
+            <span className="text-[#111110] font-semibold">{filteredProjects.length}</span> of {projects.length} projects
           </span>
         </div>
       </header>

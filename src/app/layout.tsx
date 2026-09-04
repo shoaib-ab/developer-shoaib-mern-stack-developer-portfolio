@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next"
 import { Instrument_Sans, JetBrains_Mono } from "next/font/google"
+import { getSEO } from "@/lib/db"
 import "./globals.css"
 
 const instrumentSans = Instrument_Sans({
@@ -21,12 +22,41 @@ export const viewport: Viewport = {
   initialScale: 1,
 }
 
-export const metadata: Metadata = {
-  title: "Shoaib — Full-Stack Developer",
-  description:
-    "Full-Stack Developer and Engineer specialising in React, Next.js, TypeScript, Node.js, Express, and MongoDB.",
-  keywords: ["Full-Stack Developer", "React", "Next.js", "TypeScript", "Node.js", "Shoaib Portfolio"],
-  authors: [{ name: "Shoaib" }],
+export async function generateMetadata(): Promise<Metadata> {
+  const seo = await getSEO()
+
+  return {
+    title: seo.siteTitle,
+    description: seo.metaDescription,
+    keywords: seo.keywords,
+    authors: [{ name: "Shoaib" }],
+    metadataBase: new URL(seo.canonicalUrl || "https://shoaibdeve.me"),
+    alternates: {
+      canonical: seo.canonicalUrl,
+    },
+    openGraph: {
+      title: seo.siteTitle,
+      description: seo.metaDescription,
+      url: seo.canonicalUrl,
+      siteName: seo.siteTitle,
+      images: [
+        {
+          url: seo.ogImage || "/projects/nexus-commerce.jpg",
+          width: 1200,
+          height: 630,
+          alt: seo.siteTitle,
+        },
+      ],
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: seo.siteTitle,
+      description: seo.metaDescription,
+      creator: seo.twitterHandle,
+      images: [seo.ogImage || "/projects/nexus-commerce.jpg"],
+    },
+  }
 }
 
 export default function RootLayout({
@@ -41,45 +71,6 @@ export default function RootLayout({
       data-scroll-behavior="smooth"
       suppressHydrationWarning
     >
-      <head>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@graph": [
-                {
-                  "@type": "Person",
-                  "@id": "#shoaib",
-                  name: "Shoaib",
-                  jobTitle: "Full-Stack Developer",
-                  description:
-                    "Full-Stack Developer and Engineer specialising in React, Next.js, TypeScript, Node.js, Express, and MongoDB.",
-                  knowsAbout: [
-                    "React",
-                    "Next.js",
-                    "TypeScript",
-                    "JavaScript",
-                    "Node.js",
-                    "Express",
-                    "MongoDB",
-                    "Strapi",
-                    "REST APIs",
-                  ],
-                  email: "hello@shoaib.dev",
-                  sameAs: ["https://github.com/shoaib", "https://linkedin.com/in/shoaib"],
-                },
-                {
-                  "@type": "WebSite",
-                  "@id": "#website",
-                  name: "Shoaib — Full-Stack Developer",
-                  author: { "@id": "#shoaib" },
-                },
-              ],
-            }),
-          }}
-        />
-      </head>
       <body className="antialiased bg-[#F9F8F5] text-[#111110] font-sans min-h-screen" suppressHydrationWarning>
         {children}
       </body>

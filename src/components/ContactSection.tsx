@@ -1,17 +1,35 @@
-"use client"
+import { ProfileData } from "@/lib/types"
 
 interface ContactSectionProps {
   sectionRef: (el: HTMLElement | null) => void
+  profile?: ProfileData
 }
 
-const CONTACT_LINKS = [
-  { label: "Email", value: "hello@shoaib.dev", href: "mailto:hello@shoaib.dev" },
-  { label: "GitHub", value: "github.com/shoaib", href: "https://github.com/shoaib" },
-  { label: "LinkedIn", value: "linkedin.com/in/shoaib", href: "https://linkedin.com/in/shoaib" },
-  { label: "Resume", value: "Download PDF", href: "/resume.pdf" },
-]
+export function ContactSection({ sectionRef, profile }: ContactSectionProps) {
+  const email = profile?.email || "shoaiballahbakhsh@gmail.com"
+  const githubUrl = profile?.githubUrl || "https://github.com/shoaib-ab"
+  const linkedinUrl = profile?.linkedinUrl || "https://www.linkedin.com/in/developershoaib/"
+  const resumeUrl = profile?.resumeUrl || "/resume.pdf"
+  const headline = profile?.contactHeadline || "Have a role\nin mind?"
+  const subtext =
+    profile?.contactSubtext ||
+    "I'm open to full-time roles and selective contract engagements. If you're building something that requires a strong full-stack engineer, let's talk."
 
-export function ContactSection({ sectionRef }: ContactSectionProps) {
+  const contactLinks = [
+    { label: "Email", value: email, href: `mailto:${email}` },
+    {
+      label: "GitHub",
+      value: githubUrl.replace(/^https?:\/\//, ""),
+      href: githubUrl,
+    },
+    {
+      label: "LinkedIn",
+      value: linkedinUrl.replace(/^https?:\/\//, ""),
+      href: linkedinUrl,
+    },
+    { label: "Resume", value: "Download PDF", href: resumeUrl },
+  ]
+
   return (
     <section
       ref={sectionRef}
@@ -25,18 +43,15 @@ export function ContactSection({ sectionRef }: ContactSectionProps) {
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-20 items-start">
           <div>
-            <h2 className="contact-title font-semibold mb-6">
-              Have a role
-              <br />
-              in mind?
+            <h2 className="contact-title font-semibold mb-6 whitespace-pre-line">
+              {headline}
             </h2>
             <p className="text-[1.0625rem] text-[#4A4945] leading-[1.75] max-w-[360px]">
-              I&apos;m open to full-time roles and selective contract engagements. If you&apos;re building
-              something that requires a strong full-stack engineer, let&apos;s talk.
+              {subtext}
             </p>
           </div>
           <div className="flex flex-col">
-            {CONTACT_LINKS.map((link, i, arr) => (
+            {contactLinks.map((link, i, arr) => (
               <a
                 key={link.label}
                 href={link.href}
@@ -65,10 +80,10 @@ export function ContactSection({ sectionRef }: ContactSectionProps) {
         </div>
         <div className="border-t border-[#E3E1DB] mt-12 md:mt-20 pt-8 flex flex-col md:flex-row justify-between gap-4">
           <p className="font-mono text-xs text-[#54534F] tracking-[0.05em]">
-            © 2025 Shoaib. All rights reserved.
+            © {new Date().getFullYear()} {profile?.name || "Shoaib"}. All rights reserved.
           </p>
           <p className="font-mono text-xs text-[#54534F] tracking-[0.05em]">
-            Full-Stack Developer / Engineer
+            {profile?.roleTitle || "Full-Stack Developer / Engineer"}
           </p>
         </div>
       </div>

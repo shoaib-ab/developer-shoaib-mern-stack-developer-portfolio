@@ -1,14 +1,13 @@
-"use client"
-
-import { EXPERIENCE } from "@/data/experience"
+import { EXPERIENCE, ExperienceItem } from "@/data/experience"
 import { ExperienceRow } from "./ExperienceRow"
 import { Divider } from "./Divider"
 
 interface ExperienceSectionProps {
   sectionRef: (el: HTMLElement | null) => void
+  experiences?: ExperienceItem[]
 }
 
-export function ExperienceSection({ sectionRef }: ExperienceSectionProps) {
+export function ExperienceSection({ sectionRef, experiences = EXPERIENCE }: ExperienceSectionProps) {
   return (
     <section
       ref={sectionRef}
@@ -21,8 +20,8 @@ export function ExperienceSection({ sectionRef }: ExperienceSectionProps) {
           04 — Experience
         </p>
         <div>
-          {EXPERIENCE.map((job, i) => (
-            <ExperienceRow key={job.company} job={job} isLast={i === EXPERIENCE.length - 1} />
+          {experiences.map((job, i) => (
+            <ExperienceRow key={job.company} job={job} isLast={i === experiences.length - 1} />
           ))}
         </div>
       </div>

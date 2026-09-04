@@ -9,11 +9,12 @@ import { Divider } from "./Divider"
 
 interface WorkSectionProps {
   sectionRef: (el: HTMLElement | null) => void
+  projects?: Project[]
 }
 
-export function WorkSection({ sectionRef }: WorkSectionProps) {
+export function WorkSection({ sectionRef, projects = ALL_PROJECTS }: WorkSectionProps) {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null)
-  const featuredProjects = ALL_PROJECTS.filter((p) => p.featured)
+  const featuredProjects = projects.filter((p) => p.featured)
 
   return (
     <section
@@ -41,7 +42,7 @@ export function WorkSection({ sectionRef }: WorkSectionProps) {
             href="/work"
             className="btn-primary text-xs self-start md:self-auto py-2.5 px-4"
           >
-            <span>View all 10 projects</span>
+            <span>View all {projects.length} projects</span>
             <span aria-hidden="true">→</span>
           </Link>
         </div>
@@ -71,7 +72,7 @@ export function WorkSection({ sectionRef }: WorkSectionProps) {
             href="/work"
             className="text-xs font-semibold text-[#14A800] hover:underline inline-flex items-center gap-1.5 shrink-0"
           >
-            <span>Browse all projects ({ALL_PROJECTS.length})</span>
+            <span>Browse all projects ({projects.length})</span>
             <span aria-hidden="true">→</span>
           </Link>
         </div>

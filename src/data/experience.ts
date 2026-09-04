@@ -9,42 +9,42 @@ export interface ExperienceItem {
 
 export const EXPERIENCE: ExperienceItem[] = [
   {
-    company: "Horizon Digital",
-    role: "Senior Full-Stack Developer",
-    period: "2023 — Present",
+    company: "Infinite Market Solutions",
+    role: "Full Stack Developer",
+    period: "2024 — Present",
     description:
-      "Leading development of a multi-tenant SaaS platform serving enterprise clients across the MENA region. Architecting scalable Node.js microservices, React-based interfaces, and managing production deployments.",
-    highlightBullet: "Reduced API response times by 60% through query optimisation and Redis caching.",
+      "Built and maintained scalable full-stack applications using modern technologies. Led feature development, improved API efficiency, and collaborated with stakeholders to deliver reliable, production-ready digital platforms and client platforms.",
+    highlightBullet: "Led full-stack architecture for enterprise web platforms and client portals.",
     contributions: [
-      "Reduced API response times by 60% through query optimisation and caching",
-      "Architected a real-time notification system using WebSockets for 12k+ users",
-      "Led migration from REST to GraphQL for the core data layer",
+      "Engineered scalable web applications and corporate client portals using Next.js and React",
+      "Integrated third-party APIs and streamlined backend data pipelines for high reliability",
+      "Collaborated with international clients across the UAE, Germany, and Europe to deliver custom web platforms",
     ],
   },
   {
-    company: "Craft Studio",
-    role: "Full-Stack Developer",
-    period: "2021 — 2023",
+    company: "Devorbis",
+    role: "Front End Developer",
+    period: "2022 — 2023",
     description:
-      "Built and maintained production web applications for a range of clients from early-stage startups to established brands. Delivered end-to-end features spanning frontend, backend, and database design.",
-    highlightBullet: "Built a reusable React component library deployed across 4 client projects.",
+      "Developed responsive interfaces, optimized website performance, and implemented new features for various client projects. Worked remotely with a cross-functional team, ensuring clean code, timely delivery, and a seamless user experience.",
+    highlightBullet: "Delivered high-performance frontend interfaces across diverse client engagements.",
     contributions: [
-      "Developed custom Strapi plugins for client-specific content workflows",
-      "Integrated third-party APIs including Stripe, Twilio, and Mapbox",
-      "Built a reusable component library deployed across four client projects",
+      "Built responsive UI components and interactive web apps using React and TypeScript",
+      "Optimized frontend load times and cross-browser compatibility across mobile and desktop",
+      "Collaborated remotely with cross-functional engineering teams following agile sprint workflows",
     ],
   },
   {
-    company: "Pixel Labs",
-    role: "Junior Developer",
-    period: "2020 — 2021",
+    company: "Codes Thinker",
+    role: "Front-End Developer Intern",
+    period: "2022",
     description:
-      "Started career building React interfaces and contributing to Node.js backends. Gained production experience with agile workflows, code review practices, and deployment pipelines.",
-    highlightBullet: "Improved frontend automated test coverage from 40% to 72%.",
+      "Gained hands-on experience by contributing to real-world front-end tasks, improving UI components, and learning industry-standard coding practices. Collaborated closely with senior developers to strengthen problem-solving and development workflow.",
+    highlightBullet: "Contributed to production frontend components and modern engineering workflows.",
     contributions: [
-      "Built responsive UI components in React and TypeScript",
-      "Maintained and extended existing Express API endpoints",
-      "Improved frontend test coverage from 40% to 72%",
+      "Built and tested UI components in accordance with Figma design specifications",
+      "Implemented DOM interactions and frontend animations using JavaScript and modern CSS",
+      "Strengthened version control practices and code review workflows with senior engineers",
     ],
   },
 ]

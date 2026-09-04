@@ -1,13 +1,18 @@
-"use client"
-
 import { Divider } from "./Divider"
+import { ProfileData } from "@/lib/types"
 
 interface HeroSectionProps {
   sectionRef: (el: HTMLElement | null) => void
   onGoToWork: () => void
+  profile?: ProfileData
 }
 
-export function HeroSection({ sectionRef, onGoToWork }: HeroSectionProps) {
+export function HeroSection({ sectionRef, onGoToWork, profile }: HeroSectionProps) {
+  const name = profile?.name || "Shoaib"
+  const tagline = profile?.heroTagline || "Full-Stack Developer / Engineer building thoughtful digital products."
+  const bio = profile?.heroBio || "I work across the full stack — React, Next.js, TypeScript on the frontend; Node.js, Express, and MongoDB on the backend. I care about clean architecture, API design, and products that work."
+  const resumeUrl = profile?.resumeUrl || "/resume.pdf"
+  const statusBadge = profile?.statusBadge || "Available for Opportunities"
   return (
     <section
       ref={sectionRef}
@@ -28,30 +33,29 @@ export function HeroSection({ sectionRef, onGoToWork }: HeroSectionProps) {
           <h1 className="hero-title font-semibold mb-3 md:mb-4">
             Hi, I&apos;m
             <br />
-            Shoaib<span className="text-[#14A800]">.</span>
+            {name}<span className="text-[#14A800]">.</span>
           </h1>
 
           {/* Tagline — Reads as continuous intro block with headline */}
           <p className="hero-subheading font-medium mb-6 text-[#111110]">
-            Full-Stack Developer / Engineer building thoughtful digital products.
+            {tagline}
           </p>
 
           {/* Paragraph */}
           <p className="hero-paragraph mb-14 md:mb-16 max-w-lg">
-            I work across the full stack — React, Next.js, TypeScript on the frontend; Node.js, Express, and MongoDB
-            on the backend. I care about clean architecture, API design, and products that work.
+            {bio}
           </p>
 
           {/* CTAs */}
           <div className="flex flex-wrap items-center gap-4">
             <button
               onClick={onGoToWork}
-              className="btn-primary"
+              className="btn-primary cursor-pointer"
             >
               View my work <span aria-hidden="true">↓</span>
             </button>
             <a
-              href="/resume.pdf"
+              href={resumeUrl}
               download
               className="btn-secondary"
             >

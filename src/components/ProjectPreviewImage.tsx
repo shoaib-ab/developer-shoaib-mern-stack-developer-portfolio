@@ -20,7 +20,9 @@ export function ProjectPreviewImage({ project, className = "" }: ProjectPreviewI
           <div className="w-2 h-2 rounded-full bg-[#10B981]/80" />
         </div>
         <div className="text-[10px] font-mono text-[#8C8B87] truncate max-w-[180px]">
-          {project.title.toLowerCase().replace(/\s+/g, "")}.com
+          {project.liveUrl
+            ? project.liveUrl.replace(/^https?:\/\//, "").replace(/\/$/, "")
+            : `${project.title.toLowerCase().replace(/\s+/g, "")}.com`}
         </div>
         <div className="text-[10px] font-mono text-[#8C8B87]">
           {project.year}
