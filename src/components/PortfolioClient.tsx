@@ -18,9 +18,14 @@ interface PortfolioClientProps {
 export function PortfolioClient({ initialData }: PortfolioClientProps) {
   const sectionEls = useRef<(HTMLElement | null)[]>([])
   const [currentSection, setCurrentSection] = useState(0)
+  const isProgrammaticScroll = useRef(false)
+  const programmaticScrollTimer = useRef<NodeJS.Timeout | null>(null)
 
   useEffect(() => {
     const handleScroll = () => {
+      // If user clicked a navbar link, do not let intermediate scroll frames interrupt the sliding pill
+      if (isProgrammaticScroll.current) return
+
       const scrollPosition = window.scrollY
       const windowHeight = window.innerHeight
       const documentHeight = document.documentElement.scrollHeight
@@ -52,12 +57,32 @@ export function PortfolioClient({ initialData }: PortfolioClientProps) {
     // Run check on mount
     handleScroll()
 
+    // Scroll reveal observer for elements entering viewport
+    const revealObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-revealed")
+            revealObserver.unobserve(entry.target)
+          }
+        })
+      },
+      { threshold: 0.08, rootMargin: "0px 0px -40px 0px" }
+    )
+
+    const revealElements = document.querySelectorAll(".reveal-on-scroll")
+    revealElements.forEach((el) => revealObserver.observe(el))
+
     window.addEventListener("scroll", handleScroll, { passive: true })
     window.addEventListener("resize", handleScroll, { passive: true })
 
     return () => {
       window.removeEventListener("scroll", handleScroll)
       window.removeEventListener("resize", handleScroll)
+      revealObserver.disconnect()
+      if (programmaticScrollTimer.current) {
+        clearTimeout(programmaticScrollTimer.current)
+      }
     }
   }, [])
 
@@ -66,8 +91,28 @@ export function PortfolioClient({ initialData }: PortfolioClientProps) {
   }
 
   const goToSection = (idx: number) => {
+    // Lock intermediate scroll updates so the pill glides straight to the target
+    isProgrammaticScroll.current = true
     setCurrentSection(idx)
-    sectionEls.current[idx]?.scrollIntoView({ behavior: "smooth" })
+
+    const el = sectionEls.current[idx]
+    if (el) {
+      const headerHeight = 68
+      const targetY = el.getBoundingClientRect().top + window.scrollY - headerHeight
+      window.scrollTo({
+        top: Math.max(0, targetY),
+        behavior: "smooth",
+      })
+    }
+
+    if (programmaticScrollTimer.current) {
+      clearTimeout(programmaticScrollTimer.current)
+    }
+
+    // Release lock once smooth scroll has finished
+    programmaticScrollTimer.current = setTimeout(() => {
+      isProgrammaticScroll.current = false
+    }, 850)
   }
 
   return (

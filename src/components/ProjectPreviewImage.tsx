@@ -24,8 +24,9 @@ export function ProjectPreviewImage({ project, className = "" }: ProjectPreviewI
             ? project.liveUrl.replace(/^https?:\/\//, "").replace(/\/$/, "")
             : `${project.title.toLowerCase().replace(/\s+/g, "")}.com`}
         </div>
-        <div className="text-[10px] font-mono text-[#8C8B87]">
-          {project.year}
+        <div className="flex items-center gap-1.5 text-[10px] font-mono text-[#14A800]">
+          <span className="w-1.5 h-1.5 rounded-full bg-[#14A800]" />
+          <span>{project.liveUrl ? "Live" : "Repo"}</span>
         </div>
       </div>
 

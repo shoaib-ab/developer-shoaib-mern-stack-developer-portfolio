@@ -28,7 +28,7 @@ export function AboutSection({ sectionRef, profile }: AboutSectionProps) {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-20 items-stretch">
           
           {/* Left Column: Headline + Supporting Key Metrics Block (Balances Height) */}
-          <div className="flex flex-col justify-between h-full space-y-8">
+          <div className="flex flex-col justify-between h-full space-y-8 reveal-on-scroll">
             <h2 className="section-title font-semibold">
               Engineer.
               <br />
@@ -59,7 +59,7 @@ export function AboutSection({ sectionRef, profile }: AboutSectionProps) {
           </div>
 
           {/* Right Column: Bio Paragraphs + Categorized Tech Stack */}
-          <div>
+          <div className="reveal-on-scroll reveal-delay-200">
             <p className="text-[1.0625rem] text-[#111110] leading-[1.8] mb-6">
               {p1}
             </p>

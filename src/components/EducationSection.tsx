@@ -15,12 +15,12 @@ export function EducationSection({ sectionRef, education = EDUCATION }: Educatio
       className="relative px-8 md:px-16 lg:px-24 pt-[108px] pb-[88px] scroll-mt-[68px]"
     >
       <div className="max-w-7xl w-full mx-auto">
-        <p className="section-label mb-8 md:mb-12">
+        <p className="section-label mb-8 md:mb-12 reveal-on-scroll">
           05 — Education
         </p>
         <div className="space-y-6">
           {education.map((item, i) => (
-            <article key={item.degree} className="border-t border-[#E3E1DB] pt-6">
+            <article key={item.degree} className="border-t border-[#E3E1DB] pt-6 reveal-on-scroll">
               <div className="flex flex-col md:flex-row md:items-baseline justify-between gap-2 mb-2">
                 <h3 className="job-title font-semibold tracking-tight text-[#111110]">
                   {item.degree}

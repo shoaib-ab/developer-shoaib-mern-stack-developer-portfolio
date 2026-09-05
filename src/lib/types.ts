@@ -14,6 +14,10 @@ export interface ProfileData {
   aboutParagraph1: string
   aboutParagraph2: string
   email: string
+  phone?: string
+  whatsapp?: string
+  whatsappUrl?: string
+  location?: string
   githubUrl: string
   linkedinUrl: string
   resumeUrl: string

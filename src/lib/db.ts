@@ -19,7 +19,11 @@ const INITIAL_PROFILE: ProfileData = {
     "I'm a full-stack developer with extensive experience building production applications for commercial clients and enterprises. My work spans high-conversion corporate web platforms, e-commerce applications with Stripe, real-time analytics dashboards, and responsive frontends.",
   aboutParagraph2:
     "I focus on writing clean, maintainable TypeScript and building fast, resilient architectures that deliver tangible business results and delightful user experiences.",
-  email: "shoaiballahbakhsh@gmail.com",
+  email: "shoaibbinallahbakhsh@gmail.com",
+  phone: "+92 308 8923063",
+  whatsapp: "+92 308 8923063",
+  whatsappUrl: "https://wa.me/923088923063",
+  location: "Bahawalpur, Pakistan",
   githubUrl: "https://github.com/shoaib-ab",
   linkedinUrl: "https://www.linkedin.com/in/developershoaib/",
   resumeUrl: "/resume.pdf",

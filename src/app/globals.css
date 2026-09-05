@@ -50,9 +50,17 @@ html {
 }
 
 /* Focus rings */
-:focus-visible {
+:focus-visible:not(input, textarea, select) {
   outline: 2px solid var(--accent);
   outline-offset: 2px;
+}
+
+input:focus,
+input:focus-visible,
+textarea:focus,
+textarea:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
 }
 
 /* ─── Typography & Hero Utility Classes ─── */
@@ -277,4 +285,49 @@ html {
 .project-card-interactive:hover {
   transform: translateY(-4px);
   box-shadow: 0 16px 36px -8px rgba(17, 17, 16, 0.08), 0 4px 12px rgba(17, 17, 16, 0.03);
+}
+
+/* ─── Scroll Reveal Micro-Interactions ─── */
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-on-scroll.is-revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-delay-100 { transition-delay: 100ms; }
+.reveal-delay-200 { transition-delay: 200ms; }
+.reveal-delay-300 { transition-delay: 300ms; }
+.reveal-delay-400 { transition-delay: 400ms; }
+
+/* ─── Typewriter Blinking Cursor ─── */
+@keyframes cursorBlink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.typewriter-cursor {
+  display: inline-block;
+  width: 4px;
+  height: 0.85em;
+  background-color: #14A800;
+  vertical-align: middle;
+  margin-left: 4px;
+  animation: cursorBlink 0.85s infinite;
+}
+
+.terminal-cursor {
+  display: inline-block;
+  width: 7px;
+  height: 14px;
+  background-color: #14A800;
+  vertical-align: middle;
+  margin-left: 2px;
+  animation: cursorBlink 0.75s infinite;
 }

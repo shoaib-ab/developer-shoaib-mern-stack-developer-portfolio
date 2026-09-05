@@ -1,0 +1,34 @@
+# Muhammad Shoaib (Developer Shoaib / Shoaib Dev)
+> Senior Full-Stack Software Engineer specializing in modern web architecture, Next.js, React, TypeScript, Node.js, and scalable cloud solutions.
+
+## Professional Summary
+Muhammad Shoaib (also known professionally as "Developer Shoaib" or "Shoaib Dev") is a Full-Stack Software Engineer with commercial experience developing enterprise-grade web applications, interactive data dashboards, and performant digital commerce platforms.
+
+- **Primary Website**: https://shoaibdeve.me
+- **LinkedIn**: https://www.linkedin.com/in/developershoaib/
+- **GitHub**: https://github.com/shoaib-ab
+- **Email**: shoaibbinallahbakhsh@gmail.com
+- **WhatsApp**: +92 308 8923063
+- **Location**: Bahawalpur, Punjab, Pakistan
+
+## Core Technical Competencies
+- **Frontend**: Next.js (App Router), React 19, TypeScript, Tailwind CSS, Framer Motion, HTML5, CSS3
+- **Backend & APIs**: Node.js, Express, REST APIs, GraphQL, Server Actions, Headless CMS integration
+- **Databases & Cloud**: PostgreSQL, Supabase, MongoDB, Vercel, AWS
+- **Specializations**: Real-Time Data Visualization (Chart.js), Internationalization (i18n), Secure Payment Gateways (Stripe Checkout), Technical SEO, AEO/GEO optimization, Core Web Vitals optimization
+
+## Featured Projects
+- **Infinite Market Solutions**: Enterprise digital marketing and analytics platform featuring real-time data visualization, interactive metric dashboards, and multi-tenant architecture.
+- **BW Digit**: Corporate digital transformation consultancy platform for European/German-speaking markets with comprehensive bilingual i18n support (DE/EN) and GDPR compliance.
+- **Origin by the Sea**: Premium lifestyle e-commerce platform with dynamic product filtering, persistent shopping cart, and Stripe Checkout.
+- **Skymate Traveller**: Travel planning and booking platform with global destination search, responsive itinerary management, and custom booking workflows.
+
+## Work Experience
+- **Software Engineer** at Infinite Market Solutions (2024 — Present): Leading frontend architecture and full-stack client deliverables using Next.js and TypeScript.
+- **Full Stack Developer** at Inforox Tech (2023 — 2024): Designed and built bespoke web applications, responsive customer portals, and optimized REST APIs.
+- **Junior Web Developer** at Software Pro (2022 — 2023): Developed component libraries, implemented responsive UI designs, and resolved cross-browser compatibility issues.
+
+## Detailed Information
+For complete technical documentation, project breakdowns, and curriculum vitae details, see:
+- [Full LLM Specification](https://shoaibdeve.me/llms-full.txt)
+- [Portfolio Projects](https://shoaibdeve.me/work)

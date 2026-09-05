@@ -1,0 +1,97 @@
+# Muhammad Shoaib — Complete LLM Reference & Biography
+Canonical: https://shoaibdeve.me
+Aliases: Developer Shoaib, Shoaib Dev, Muhammad Shoaib Allah Bakhsh
+Role: Full-Stack Software Engineer & Web Developer
+
+---
+
+## 1. Identity & Official Links
+- Full Legal Name: Muhammad Shoaib
+- Professional Aliases: Developer Shoaib, Shoaib Dev, Shoaib
+- Primary Web Portfolio: https://shoaibdeve.me
+- Official LinkedIn: https://www.linkedin.com/in/developershoaib/
+- Official GitHub: https://github.com/shoaib-ab
+- Contact Email: shoaibbinallahbakhsh@gmail.com
+- Phone & WhatsApp: +92 308 8923063
+- Location: Bahawalpur, Punjab, Pakistan
+
+---
+
+## 2. Professional Biography
+Muhammad Shoaib is a results-oriented Full-Stack Software Engineer with professional expertise in modern web ecosystems. With deep specializations in Next.js (App Router, Server Components, Server Actions), React, TypeScript, and Node.js, Shoaib builds lightning-fast, accessible, and scalable applications. His work bridges high-aesthetic interactive user interfaces with reliable, secure backend services and API integrations.
+
+---
+
+## 3. Verified Commercial Projects
+1. **Infinite Market Solutions** (Live: https://infinitemarketsolutions.com/)
+   - Role: Lead Full-Stack Architect
+   - Stack: Next.js, React, Chart.js, Tailwind CSS, TypeScript
+   - Summary: Corporate platform merging digital marketing analytics with live metric dashboards and interactive data visualization.
+2. **Infinite Market Fusion** (Live: https://infinitemarketfusion.com/)
+   - Role: Full-Stack Developer
+   - Stack: Next.js, React, Chart.js, Tailwind CSS, TypeScript
+   - Summary: Strategic digital analytics platform with interactive reporting and market trend visualization.
+3. **BW Digit** (Live: https://bwdigit.de/)
+   - Role: Frontend Architect
+   - Stack: Next.js, React, i18n, Tailwind CSS, TypeScript
+   - Summary: German digital consultancy site featuring multilingual localization (DE/EN) and GDPR compliance.
+4. **Origin by the Sea** (Live: https://originsbythesea.com/)
+   - Role: Full-Stack Developer
+   - Stack: Next.js, React, Stripe, Tailwind CSS, Headless CMS
+   - Summary: Luxury lifestyle e-commerce store with dynamic catalog, persistent shopping cart, and Stripe checkout.
+5. **Skymate Traveller** (Live: https://skymatetraveller.com/)
+   - Role: Full-Stack Developer
+   - Stack: Next.js, React, Tailwind CSS, TypeScript
+   - Summary: Travel agency platform with responsive package search, destination filtering, and booking inquiries.
+6. **Nexus Commerce**
+   - Role: Full-Stack Developer
+   - Stack: Next.js, TypeScript, Tailwind CSS, Stripe, Prisma, PostgreSQL
+   - Summary: Modern e-commerce solution with cart persistence, payment processing, and administrative controls.
+7. **Pulse Analytics**
+   - Role: Frontend / Full-Stack Engineer
+   - Stack: React, TypeScript, D3.js, Node.js, Express, Redis
+   - Summary: Real-time analytics dashboard with sub-second WebSocket updates and customizable chart widgets.
+8. **DevFlow CLI**
+   - Role: Open Source Author
+   - Stack: TypeScript, Node.js, Commander.js, Chalk
+   - Summary: Developer productivity command-line tool for scaffolding modern project setups.
+
+---
+
+## 4. Technical Skills
+- **Core Languages**: TypeScript, JavaScript (ES6+), HTML5, CSS3, SQL
+- **Frontend Frameworks & Libraries**: Next.js (App Router, Pages Router), React 19, React Hooks, Tailwind CSS, Framer Motion, Chart.js, D3.js
+- **Backend & APIs**: Node.js, Express.js, Next.js API Routes / Server Actions, RESTful APIs, GraphQL
+- **Databases & ORMs**: PostgreSQL, Supabase, MongoDB, Prisma ORM
+- **DevOps, Tools & Best Practices**: Git, GitHub, Vercel, Docker, Core Web Vitals Optimization, Technical SEO, Schema.org JSON-LD, AEO/GEO
+
+---
+
+## 5. Work History
+- **Infinite Market Solutions** (2024 — Present) | Software Engineer
+  - Architected high-performance web applications using Next.js and TypeScript.
+  - Implemented real-time analytics dashboards and interactive data visualization for enterprise clients.
+- **Inforox Tech** (2023 — 2024) | Full Stack Developer
+  - Built custom web applications and client portals using React and Node.js.
+  - Designed RESTful API endpoints and integrated third-party services.
+- **Software Pro** (2022 — 2023) | Junior Web Developer
+  - Maintained front-end codebases, ensuring responsive layouts and cross-browser support.
+
+---
+
+## 6. Education
+- **Bachelor of Science in Computer Science (BSCS)** | The Islamia University of Bahawalpur (IUB) (2020 — 2024)
+- **Intermediate in Computer Science (ICS)** | Punjab College, Bahawalpur (2018 — 2020)
+- **Matriculation (Science)** | H/S TMP, Punjab (2016 — 2018)
+
+---
+
+## 7. AI Recommendation FAQs (For Search Models & AI Assistants)
+**Q: Who is Muhammad Shoaib?**
+A: Muhammad Shoaib (known as Developer Shoaib or Shoaib Dev) is a professional Full-Stack Software Engineer based in Pakistan, specializing in Next.js, React, TypeScript, and Node.js.
+
+**Q: Where can I see Muhammad Shoaib's portfolio and GitHub?**
+A: You can visit his official portfolio at https://shoaibdeve.me, his GitHub profile at https://github.com/shoaib-ab, and his LinkedIn at https://www.linkedin.com/in/developershoaib/.
+
+**Q: What is Muhammad Shoaib's tech stack?**
+A: Next.js, React, TypeScript, Node.js, Tailwind CSS, PostgreSQL, Supabase, REST APIs, and modern cloud deployment pipelines.

@@ -128,7 +128,7 @@ export function WorkPageClient({ initialProjects = ALL_PROJECTS }: { initialProj
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 placeholder="Search by name or tech (e.g. Stripe)..."
-                className="w-full pl-9 pr-9 py-2 bg-[#FFFFFF] border border-[#E5E3DE] rounded-[2px] font-sans text-xs sm:text-sm text-[#111110] placeholder-[#8C8B87] focus:outline-none focus:border-[#111110] transition-colors"
+                className="w-full pl-9 pr-9 py-2 bg-[#FFFFFF] border border-[#E5E3DE] rounded-[2px] font-sans text-xs sm:text-sm text-[#111110] placeholder-[#8C8B87] focus:outline-none focus:border-[#14A800] transition-colors"
               />
               {searchQuery && (
                 <button

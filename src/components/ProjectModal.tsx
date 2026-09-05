@@ -97,8 +97,9 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
               {activeProject.category}
             </span>
             <span className="text-[#C4C2BA]">•</span>
-            <span className="font-mono text-xs text-[#706E68]">
-              {activeProject.year}
+            <span className="inline-flex items-center gap-1.5 font-mono text-xs text-[#54534F]">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#14A800]" />
+              {activeProject.liveUrl ? "Production System" : "Open Source Project"}
             </span>
           </div>
 

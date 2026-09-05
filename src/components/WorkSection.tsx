@@ -25,7 +25,7 @@ export function WorkSection({ sectionRef, projects = ALL_PROJECTS }: WorkSection
     >
       <div className="max-w-7xl w-full mx-auto">
         {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 md:mb-14 gap-4">
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 md:mb-14 gap-4 reveal-on-scroll">
           <div>
             <p className="section-label mb-3">
               03 — Selected Work
@@ -49,17 +49,21 @@ export function WorkSection({ sectionRef, projects = ALL_PROJECTS }: WorkSection
 
         {/* Featured Projects Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-          {featuredProjects.map((project) => (
-            <ProjectCard
+          {featuredProjects.map((project, idx) => (
+            <div
               key={project.id}
-              project={project}
-              onOpenDetails={setSelectedProject}
-            />
+              className={`reveal-on-scroll reveal-delay-${((idx % 3) + 1) * 100}`}
+            >
+              <ProjectCard
+                project={project}
+                onOpenDetails={setSelectedProject}
+              />
+            </div>
           ))}
         </div>
 
         {/* Bottom Banner to see all work */}
-        <div className="mt-12 p-6 rounded-[3px] border border-[#E3E1DB] bg-[#FFFFFF] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+        <div className="mt-12 p-6 rounded-[3px] border border-[#E3E1DB] bg-[#FFFFFF] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 reveal-on-scroll">
           <div>
             <h4 className="font-semibold text-sm text-[#111110]">
               Looking for more projects?

@@ -16,12 +16,14 @@ export function ExperienceSection({ sectionRef, experiences = EXPERIENCE }: Expe
       className="relative px-8 md:px-16 lg:px-24 pt-[108px] pb-[88px] scroll-mt-[68px]"
     >
       <div className="max-w-7xl w-full mx-auto">
-        <p className="section-label mb-8 md:mb-12">
+        <p className="section-label mb-8 md:mb-12 reveal-on-scroll">
           04 — Experience
         </p>
-        <div>
+        <div className="space-y-0">
           {experiences.map((job, i) => (
-            <ExperienceRow key={job.company} job={job} isLast={i === experiences.length - 1} />
+            <div key={job.company} className="reveal-on-scroll">
+              <ExperienceRow job={job} isLast={i === experiences.length - 1} />
+            </div>
           ))}
         </div>
       </div>

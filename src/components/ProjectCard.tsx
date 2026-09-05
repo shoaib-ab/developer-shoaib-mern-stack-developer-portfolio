@@ -24,14 +24,15 @@ export function ProjectCard({ project, onOpenDetails }: ProjectCardProps) {
       {/* Card Content */}
       <div className="p-5 sm:p-6 space-y-3 flex-1 flex flex-col justify-between">
         <div className="space-y-3">
-          {/* Category & Year */}
+          {/* Category & Status Indicator */}
           <div className="flex items-center justify-between text-xs">
             <span className="font-mono text-[11px] uppercase tracking-wider text-[#14A800] font-semibold">
               {project.category}
             </span>
-            <span className="font-mono text-xs text-[#706E68]">
-              {project.year}
-            </span>
+            <div className="flex items-center gap-1.5 font-mono text-[11px] text-[#54534F]">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#14A800]" />
+              <span>{project.liveUrl ? "Production" : "Open Source"}</span>
+            </div>
           </div>
 
           {/* Project Title */}
