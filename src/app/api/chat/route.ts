@@ -29,11 +29,13 @@ KEY FACTS ABOUT SHOAIB:
   4. Origin by the Sea (originsbythesea.com) - Luxury coastal e-commerce with Stripe checkout.
   5. Skymate Traveller (skymatetraveller.com) - Travel agency platform with package search and itinerary workflows.
 - Experience:
-  - Software Engineer at Infinite Market Solutions (2024 — Present)
-  - Full Stack Developer at Inforox Tech (2023 — 2024)
-  - Front End Developer at Devorbis (2022 — 2023)
-  - Front-End Developer Intern at Codes Thinker (2022)
-- Education: BS in Computer Science from The Islamia University of Bahawalpur (IUB, 2020 — 2024).
+  - Frontend Developer at Evonicsoft (May 2026 — Present, On-site, Bahawalpur): Building SPA booking systems with Vue.js & TypeScript on Laravel + Inertia, and corporate platforms with Next.js & Strapi (GraphQL).
+  - Full Stack Engineer at PT Express (Jan 2026 — May 2026, Remote, Saudi Arabia): Built multi-tenant shipment management with WebSocket real-time tracking, React.js web, React Native mobile, Node.js/Express, PostgreSQL, Docker, and AWS.
+  - Associate Software Engineer at Infinite Market Solutions (Mar 2025 — Mar 2026, On-site, Bahawalpur): Built full-stack MERN platforms including Rixdu (marketplace) and Origins by the Sea (e-commerce with Stripe), with TypeScript, Docker, and AWS.
+  - Frontend Developer (Internship) at Skill Evokers (Mar 2024 — Mar 2025, On-site, Bahawalpur): Developed responsive admin dashboards and full-stack MERN features with React.js, Node.js, Express.js, and MongoDB.
+- Education:
+  - Bachelor of Science in Computer Science (BS, CS) from The Islamia University of Bahawalpur (Jan 2021 — Jan 2025, 3.60/4.0 CGPA). Final Year Project: "Handi" (full-stack kitchen-to-customer food platform with charity donation module).
+  - ICS, Computer Science from Punjab Group Of Colleges (Jan 2019 — Jan 2021, 1048/1100, 95.3%, 1st Position in pre-exam preparation test series).
 - Contact & Socials:
   - WhatsApp & Phone: +92 308 8923063
   - Email: shoaibbinallahbakhsh@gmail.com
@@ -83,15 +85,15 @@ COMMUNICATION RULES:
     let reply = ""
 
     if (query.includes("tech") || query.includes("stack") || query.includes("skills") || query.includes("language")) {
-      reply = "Shoaib specializes in full-stack web development. His primary stack includes Next.js (App Router), React 19, TypeScript, Node.js, Tailwind CSS, PostgreSQL, Supabase, and REST/GraphQL APIs. He also builds real-time analytics with Chart.js and handles payment integrations like Stripe."
+      reply = "Shoaib specializes in full-stack web development. His primary stack includes Next.js (App Router), React 19, TypeScript, Node.js, Tailwind CSS, PostgreSQL, Supabase, and REST/GraphQL APIs. He also builds real-time systems with WebSockets, mobile apps with React Native, and handles payment integrations like Stripe."
     } else if (query.includes("project") || query.includes("work") || query.includes("commercial")) {
-      reply = "Shoaib has built commercial enterprise platforms including Infinite Market Solutions, Infinite Market Fusion (real-time analytics), BW Digit (a multilingual German consultancy site), Origin by the Sea (luxury e-commerce with Stripe), and Skymate Traveller. You can explore all 17 projects in the Work section!"
+      reply = "Shoaib has built commercial enterprise platforms including Infinite Market Solutions, Infinite Market Fusion (real-time analytics), BW Digit (multilingual German consultancy), Origin by the Sea (luxury e-commerce with Stripe), Rixdu (marketplace), and PT Express shipment tracking. You can explore all 17 projects in the Work section!"
     } else if (query.includes("contact") || query.includes("hire") || query.includes("email") || query.includes("phone") || query.includes("whatsapp")) {
       reply = "Shoaib is open to full-stack engineering roles and high-impact contracts! You can message him directly on WhatsApp at +92 308 8923063, email him at shoaibbinallahbakhsh@gmail.com, or connect on LinkedIn (linkedin.com/in/developershoaib)."
     } else if (query.includes("experience") || query.includes("job") || query.includes("company")) {
-      reply = "Shoaib is currently a Software Engineer at Infinite Market Solutions (2024–Present). Previously, he worked as a Full Stack Developer at Inforox Tech and Frontend Developer at Devorbis, delivering production apps for clients across Germany, the UAE, and globally."
+      reply = "Shoaib currently works as a Frontend Developer at Evonicsoft (building SPA booking systems and Next.js platforms). Previously, he was a Full Stack Engineer at PT Express (Saudi Arabia, remote), Associate Software Engineer at Infinite Market Solutions, and Frontend Developer intern at Skill Evokers."
     } else if (query.includes("education") || query.includes("degree") || query.includes("university")) {
-      reply = "Shoaib graduated with a Bachelor of Science in Computer Science (BSCS) from The Islamia University of Bahawalpur (IUB, 2020–2024)."
+      reply = "Shoaib graduated with a BS in Computer Science from The Islamia University of Bahawalpur (3.60/4.0 CGPA), where his Final Year Project was 'Handi' (a full-stack food marketplace). He completed his ICS at Punjab Group of Colleges with 95.3% marks (1st Position in pre-exam preparation)."
     } else {
       reply = "I'm Shoaib's AI assistant! Feel free to ask me about his commercial projects, technical stack (Next.js, TypeScript, React, Node.js), engineering work history, or how to get in touch with him directly for opportunities."
     }

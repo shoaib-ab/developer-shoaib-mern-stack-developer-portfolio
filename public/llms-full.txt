@@ -68,21 +68,28 @@ Muhammad Shoaib is a results-oriented Full-Stack Software Engineer with professi
 ---
 
 ## 5. Work History
-- **Infinite Market Solutions** (2024 — Present) | Software Engineer
-  - Architected high-performance web applications using Next.js and TypeScript.
-  - Implemented real-time analytics dashboards and interactive data visualization for enterprise clients.
-- **Inforox Tech** (2023 — 2024) | Full Stack Developer
-  - Built custom web applications and client portals using React and Node.js.
-  - Designed RESTful API endpoints and integrated third-party services.
-- **Software Pro** (2022 — 2023) | Junior Web Developer
-  - Maintained front-end codebases, ensuring responsive layouts and cross-browser support.
+- **Evonicsoft** (May 2026 — Present) | Frontend Developer
+  - Building single-page application (SPA) booking systems with Vue.js & TypeScript on a Laravel + Inertia backend.
+  - Developing high-performance corporate platforms using Next.js and headless Strapi CMS with GraphQL.
+- **PT Express** (Jan 2026 — May 2026) | Full Stack Engineer (Remote, Saudi Arabia)
+  - Built multi-tenant shipment management platform with real-time WebSocket order tracking.
+  - Developed cross-platform web (React.js) and mobile (React Native) experiences with Node.js, PostgreSQL, Docker, and AWS.
+- **Infinite Market Solutions** (Mar 2025 — Mar 2026) | Associate Software Engineer
+  - Engineered full-stack MERN platforms including Rixdu (marketplace) and Origins by the Sea (luxury lifestyle e-commerce).
+  - Applied TypeScript for end-to-end type safety, containerized workflows with Docker, and cloud deployments on AWS.
+- **Skill Evokers** (Mar 2024 — Mar 2025) | Frontend Developer (Internship)
+  - Built responsive admin dashboards and full-stack MERN features with React.js, Node.js, Express.js, and MongoDB.
 
 ---
 
 ## 6. Education
-- **Bachelor of Science in Computer Science (BSCS)** | The Islamia University of Bahawalpur (IUB) (2020 — 2024)
-- **Intermediate in Computer Science (ICS)** | Punjab College, Bahawalpur (2018 — 2020)
-- **Matriculation (Science)** | H/S TMP, Punjab (2016 — 2018)
+- **Bachelor of Science in Computer Science (BS, CS)** | The Islamia University of Bahawalpur (Jan 2021 — Jan 2025)
+  - Graduated with 3.60 / 4.0 CGPA.
+  - Final Year Project: "Handi" — full-stack food marketplace connecting home-based kitchens with consumers and charity modules.
+- **Intermediate in Computer Science (ICS)** | Punjab Group Of Colleges (Jan 2019 — Jan 2021)
+  - 1048 / 1100 marks (95.3%).
+  - Achieved 1st Position in 3-Month Pre-Exam Preparation Test Series.
+- **Matriculation (Science)** | H/S TMP, Punjab (2017 — 2019)
 
 ---
 

@@ -1,7 +1,6 @@
 import type { Metadata, Viewport } from "next"
 import { Instrument_Sans, JetBrains_Mono } from "next/font/google"
 import { getSEO } from "@/lib/db"
-import { WhatsAppButton } from "@/components/WhatsAppButton"
 import { Chatbot } from "@/components/Chatbot"
 import "./globals.css"
 
@@ -119,7 +118,7 @@ export default async function RootLayout({
         jobTitle: "Full-Stack Software Engineer",
         worksFor: {
           "@type": "Organization",
-          name: "Infinite Market Solutions"
+          name: "Evonicsoft"
         },
         sameAs: [
           "https://www.linkedin.com/in/developershoaib/",
@@ -191,7 +190,6 @@ export default async function RootLayout({
       </head>
       <body className="antialiased bg-[#F9F8F5] text-[#111110] font-sans min-h-screen relative" suppressHydrationWarning>
         {children}
-        <WhatsAppButton />
         <Chatbot />
       </body>
     </html>

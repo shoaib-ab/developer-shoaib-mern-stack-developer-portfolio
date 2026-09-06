@@ -9,26 +9,28 @@ export interface EducationItem {
 
 export const EDUCATION: EducationItem[] = [
   {
-    degree: "Bachelors in Computer Science",
-    institution: "The Islamia University of Bahawalpur (IUB)",
-    location: "Bahawalpur, Pakistan",
-    period: "2020 — 2024",
-    details: "Focused on Software Engineering, Data Structures, Database Systems, and Modern Web Technologies.",
-    honors: "Graduated with Computer Science Honors",
+    degree: "Bachelor of Science - BS, Computer Science",
+    institution: "The Islamia University of Bahawalpur",
+    location: "Bahawalpur, Punjab, Pakistan",
+    period: "Jan 2021 — Jan 2025",
+    details:
+      "Graduated with a 3.60/4.0 CGPA. Core subjects: Object-Oriented Programming, Data Structures, Databases, Operating Systems, Algorithm Design & Analysis, and Compiler Construction. Final Year Project: 'Handi' — a full-stack platform connecting home-based kitchens with customers, including a related charity donation module.",
+    honors: "3.60 / 4.0 CGPA",
   },
   {
-    degree: "Intermediate in Computer Science (ICS)",
-    institution: "Govt. Graduate College (G.G.C)",
-    location: "Bahawalpur, Pakistan",
-    period: "2018 — 2020",
-    details: "Core foundations in programming logic, computer systems, and mathematics.",
-    honors: "High First Division",
+    degree: "ICS, Computer Science",
+    institution: "Punjab Group Of Colleges",
+    location: "Bahawalpur, Punjab, Pakistan",
+    period: "Jan 2019 — Jan 2021",
+    details:
+      "Graduated with 1048/1100 (95.3%) marks. Achieved 1st Position in pre-exam preparation test series. Built strong grounding in programming logic, mathematics, data structures basics, computer networks, and operating systems.",
+    honors: "1048 / 1100 (95.3%) • 1st Position",
   },
   {
     degree: "Matriculation (Science)",
     institution: "H/S TMP",
     location: "Punjab, Pakistan",
-    period: "2016 — 2018",
+    period: "2017 — 2019",
     details: "Solid academic foundation in mathematics, science, and analytical thinking.",
   },
 ]
