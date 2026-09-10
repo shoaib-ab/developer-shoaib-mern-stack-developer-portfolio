@@ -636,28 +636,15 @@ function ProfileTabForm({
         />
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
-        <div>
-          <label className="font-mono text-[#54534F] block mb-1">Availability Status</label>
-          <input
-            type="text"
-            value={profile.statusText}
-            onChange={(e) => setProfile({ ...profile, statusText: e.target.value })}
-            className="w-full p-2.5 bg-[#F9F8F5] border border-[#E3E1DB] rounded text-sm text-[#111110]"
-          />
-        </div>
-        <div className="flex items-center gap-2 pt-5">
-          <input
-            type="checkbox"
-            id="isOpenForWork"
-            checked={profile.isOpenForWork}
-            onChange={(e) => setProfile({ ...profile, isOpenForWork: e.target.checked })}
-            className="w-4 h-4 accent-[#14A800] rounded"
-          />
-          <label htmlFor="isOpenForWork" className="text-xs text-[#111110] font-medium cursor-pointer">
-            Open for Opportunities (Green Pulsing Dot)
-          </label>
-        </div>
+      <div className="text-xs">
+        <label className="font-mono text-[#54534F] block mb-1">Availability Status Badge</label>
+        <input
+          type="text"
+          value={profile.statusBadge}
+          onChange={(e) => setProfile({ ...profile, statusBadge: e.target.value })}
+          className="w-full p-2.5 bg-[#F9F8F5] border border-[#E3E1DB] rounded text-sm text-[#111110]"
+          placeholder="Open for Opportunities"
+        />
       </div>
 
       {/* About Section Custom Content */}
