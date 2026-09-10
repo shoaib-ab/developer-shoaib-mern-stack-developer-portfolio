@@ -12,12 +12,12 @@ export function SectionIndicator({ currentSection, onGoToSection }: SectionIndic
     <>
       {/* Left Vertical Section Progress Rail (Desktop XL) */}
       <div
-        className="fixed left-6 md:left-8 top-1/2 -translate-y-1/2 z-40 hidden xl:flex flex-col items-center gap-3 bg-[#F9F8F5]/80 backdrop-blur-xs p-2 rounded-full border border-[#E3E1DB]/60"
+        className="fixed left-6 md:left-8 top-1/2 -translate-y-1/2 z-40 hidden xl:flex flex-col items-center gap-3 bg-[#FAF9F6]/85 backdrop-blur-sm p-2 rounded-full border border-[#E2DFD7]/80 shadow-2xs"
         aria-label="Section progress rail"
       >
         <div className="relative flex flex-col items-center gap-3">
           {/* Vertical connecting background line */}
-          <div className="absolute top-2 bottom-2 w-[1px] bg-[#E3E1DB] -z-10" />
+          <div className="absolute top-2 bottom-2 w-[1px] bg-[#E2DFD7] -z-10" />
 
           {SECTIONS.map((s, i) => {
             const isActive = currentSection === i
@@ -50,7 +50,7 @@ export function SectionIndicator({ currentSection, onGoToSection }: SectionIndic
 
       {/* Bottom-Right Counter Widget (All Viewports) */}
       <div className="fixed bottom-6 right-6 md:bottom-8 md:right-8 z-50 flex items-center gap-3">
-        <span className="flex items-center gap-1 font-mono text-xs px-2.5 py-1 rounded bg-[#F0EFEA] border border-[#E3E1DB]">
+        <span className="flex items-center gap-1 font-mono text-xs px-2.5 py-1 rounded bg-[#FFFFFF] border border-[#E2DFD7] shadow-xs">
           <span className="text-[#111110] font-semibold">
             {String(currentSection + 1).padStart(2, "0")}
           </span>

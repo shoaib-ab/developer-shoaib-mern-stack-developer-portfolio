@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useRef } from "react"
 import Link from "next/link"
 import { useRouter } from "next/navigation"
 import { SiteData, Project, ExperienceItem, EducationItem } from "@/lib/types"
@@ -307,6 +307,7 @@ export function AdminDashboardClient({ initialData }: AdminDashboardClientProps)
             initialProfile={data.profile}
             saving={saving}
             onSave={(updatedProfile) => handleSave({ profile: updatedProfile })}
+            showToast={showToast}
           />
         )}
 
@@ -536,12 +537,48 @@ function ProfileTabForm({
   initialProfile,
   saving,
   onSave,
+  showToast,
 }: {
   initialProfile: SiteData["profile"]
   saving: boolean
   onSave: (p: SiteData["profile"]) => void
+  showToast: (msg: string) => void
 }) {
   const [profile, setProfile] = useState(initialProfile)
+  const [uploadingResume, setUploadingResume] = useState(false)
+  const [showManualUrl, setShowManualUrl] = useState(false)
+  const resumeFileInputRef = useRef<HTMLInputElement | null>(null)
+
+  const handleResumeUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0]
+    if (!file) return
+
+    setUploadingResume(true)
+    const formData = new FormData()
+    formData.append("file", file)
+    formData.append("folder", "resume")
+
+    try {
+      const res = await fetch("/api/admin/upload", {
+        method: "POST",
+        body: formData,
+      })
+
+      const uploadData = await res.json()
+      if (!res.ok) throw new Error(uploadData.error || "Resume upload failed.")
+
+      setProfile((prev) => ({ ...prev, resumeUrl: uploadData.url }))
+      showToast("Resume uploaded successfully! Click Save to apply.")
+    } catch (err: unknown) {
+      const msg = err instanceof Error ? err.message : "Failed to upload resume file."
+      alert(msg)
+    } finally {
+      setUploadingResume(false)
+      if (resumeFileInputRef.current) {
+        resumeFileInputRef.current.value = ""
+      }
+    }
+  }
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
@@ -559,7 +596,7 @@ function ProfileTabForm({
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
         <div>
-          <label className="font-mono text-[#54534F] block mb-1">Your Name</label>
+          <label className="font-mono text-[#54534F] block mb-1">Full Name</label>
           <input
             type="text"
             value={profile.name}
@@ -569,7 +606,7 @@ function ProfileTabForm({
         </div>
 
         <div>
-          <label className="font-mono text-[#54534F] block mb-1">Role Title</label>
+          <label className="font-mono text-[#54534F] block mb-1">Role Title (Eyebrow)</label>
           <input
             type="text"
             value={profile.roleTitle}
@@ -577,17 +614,6 @@ function ProfileTabForm({
             className="w-full p-2.5 bg-[#F9F8F5] border border-[#E3E1DB] rounded text-sm text-[#111110]"
           />
         </div>
-      </div>
-
-      <div className="text-xs">
-        <label className="font-mono text-[#54534F] block mb-1">Availability Status Badge</label>
-        <input
-          type="text"
-          value={profile.statusBadge}
-          onChange={(e) => setProfile({ ...profile, statusBadge: e.target.value })}
-          className="w-full p-2.5 bg-[#F9F8F5] border border-[#E3E1DB] rounded text-sm text-[#111110]"
-          placeholder="Available for contracts"
-        />
       </div>
 
       <div className="text-xs">
@@ -601,7 +627,7 @@ function ProfileTabForm({
       </div>
 
       <div className="text-xs">
-        <label className="font-mono text-[#54534F] block mb-1">Hero Bio Paragraph</label>
+        <label className="font-mono text-[#54534F] block mb-1">Hero Bio</label>
         <textarea
           rows={3}
           value={profile.heroBio}
@@ -610,9 +636,141 @@ function ProfileTabForm({
         />
       </div>
 
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
+        <div>
+          <label className="font-mono text-[#54534F] block mb-1">Availability Status</label>
+          <input
+            type="text"
+            value={profile.statusText}
+            onChange={(e) => setProfile({ ...profile, statusText: e.target.value })}
+            className="w-full p-2.5 bg-[#F9F8F5] border border-[#E3E1DB] rounded text-sm text-[#111110]"
+          />
+        </div>
+        <div className="flex items-center gap-2 pt-5">
+          <input
+            type="checkbox"
+            id="isOpenForWork"
+            checked={profile.isOpenForWork}
+            onChange={(e) => setProfile({ ...profile, isOpenForWork: e.target.checked })}
+            className="w-4 h-4 accent-[#14A800] rounded"
+          />
+          <label htmlFor="isOpenForWork" className="text-xs text-[#111110] font-medium cursor-pointer">
+            Open for Opportunities (Green Pulsing Dot)
+          </label>
+        </div>
+      </div>
+
+      {/* About Section Custom Content */}
+      <div className="pt-4 border-t border-[#EAE8E2] space-y-4 text-xs">
+        <h3 className="font-semibold text-sm text-[#111110]">About Section Paragraphs</h3>
+        <div>
+          <label className="font-mono text-[#54534F] block mb-1">About Paragraph 1</label>
+          <textarea
+            rows={3}
+            value={profile.aboutParagraph1 || ""}
+            onChange={(e) => setProfile({ ...profile, aboutParagraph1: e.target.value })}
+            className="w-full p-2 bg-[#F9F8F5] border border-[#E3E1DB] rounded text-sm text-[#111110]"
+          />
+        </div>
+        <div>
+          <label className="font-mono text-[#54534F] block mb-1">About Paragraph 2</label>
+          <textarea
+            rows={3}
+            value={profile.aboutParagraph2 || ""}
+            onChange={(e) => setProfile({ ...profile, aboutParagraph2: e.target.value })}
+            className="w-full p-2 bg-[#F9F8F5] border border-[#E3E1DB] rounded text-sm text-[#111110]"
+          />
+        </div>
+      </div>
+
       {/* Social and Contact Links */}
       <div className="pt-4 border-t border-[#EAE8E2] space-y-4 text-xs">
         <h3 className="font-semibold text-sm text-[#111110]">Contact & Social Profiles</h3>
+        
+        {/* Dedicated Resume Upload Section */}
+        <div className="p-4 rounded-[4px] border border-[#E0DCD3] bg-[#FAF9F6]">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+            <div className="space-y-1">
+              <div className="flex items-center gap-2">
+                <span className="font-mono text-xs font-semibold text-[#111110]">
+                  Resume Document
+                </span>
+                <span className="text-[10px] font-mono px-1.5 py-0.5 rounded bg-[#14A800]/10 text-[#14A800] font-medium">
+                  PDF / DOC
+                </span>
+              </div>
+              <p className="text-xs text-[#54534F] flex flex-wrap items-center gap-2">
+                <span>Active File:</span>
+                <code className="font-mono text-[11px] bg-white px-2 py-0.5 rounded border border-[#E0DCD3] text-[#111110]">
+                  {profile.resumeUrl || "None configured"}
+                </code>
+                {profile.resumeUrl && (
+                  <a
+                    href={profile.resumeUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-xs font-semibold text-[#14A800] hover:underline inline-flex items-center gap-0.5"
+                  >
+                    <span>View / Test Resume</span>
+                    <span aria-hidden="true">↗</span>
+                  </a>
+                )}
+              </p>
+            </div>
+
+            <div className="flex items-center gap-2 shrink-0">
+              <input
+                type="file"
+                ref={resumeFileInputRef}
+                onChange={handleResumeUpload}
+                accept=".pdf,.doc,.docx,application/pdf"
+                className="hidden"
+              />
+              <button
+                type="button"
+                disabled={uploadingResume}
+                onClick={() => resumeFileInputRef.current?.click()}
+                className="btn-primary text-xs py-2 px-3.5 flex items-center gap-1.5 cursor-pointer disabled:opacity-50"
+              >
+                {uploadingResume ? (
+                  <>
+                    <span className="animate-spin text-sm">↻</span>
+                    <span>Uploading Resume...</span>
+                  </>
+                ) : (
+                  <>
+                    <span>⬆</span>
+                    <span>Upload New Resume</span>
+                  </>
+                )}
+              </button>
+              <button
+                type="button"
+                onClick={() => setShowManualUrl((v) => !v)}
+                className="text-xs font-mono text-[#787772] hover:text-[#111110] px-2 py-1 underline cursor-pointer"
+              >
+                {showManualUrl ? "Hide URL" : "Edit URL"}
+              </button>
+            </div>
+          </div>
+
+          {/* Optional manual URL override input */}
+          {showManualUrl && (
+            <div className="mt-3 pt-3 border-t border-[#E8E6E0]">
+              <label className="font-mono text-[11px] text-[#54534F] block mb-1">
+                Manual URL / External Link
+              </label>
+              <input
+                type="text"
+                value={profile.resumeUrl}
+                onChange={(e) => setProfile({ ...profile, resumeUrl: e.target.value })}
+                placeholder="/resume.pdf or https://..."
+                className="w-full p-2 bg-[#FFFFFF] border border-[#E3E1DB] rounded text-xs font-mono text-[#111110]"
+              />
+            </div>
+          )}
+        </div>
+
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div>
             <label className="font-mono text-[#54534F] block mb-1">Email Address</label>
@@ -624,11 +782,11 @@ function ProfileTabForm({
             />
           </div>
           <div>
-            <label className="font-mono text-[#54534F] block mb-1">Resume File URL</label>
+            <label className="font-mono text-[#54534F] block mb-1">Phone Number</label>
             <input
               type="text"
-              value={profile.resumeUrl}
-              onChange={(e) => setProfile({ ...profile, resumeUrl: e.target.value })}
+              value={profile.phone}
+              onChange={(e) => setProfile({ ...profile, phone: e.target.value })}
               className="w-full p-2 bg-[#F9F8F5] border border-[#E3E1DB] rounded text-sm text-[#111110]"
             />
           </div>

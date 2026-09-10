@@ -44,7 +44,7 @@ export function ContactSection({ sectionRef, profile }: ContactSectionProps) {
       ref={sectionRef}
       id="contact"
       aria-label="Contact"
-      className="relative px-8 md:px-16 lg:px-24 pt-[108px] pb-[88px] scroll-mt-[68px]"
+      className="relative section-bg-a px-8 md:px-16 lg:px-24 pt-[108px] pb-[88px] scroll-mt-[68px]"
     >
       <div className="max-w-7xl w-full mx-auto">
         <p className="section-label mb-8 md:mb-12 reveal-on-scroll">

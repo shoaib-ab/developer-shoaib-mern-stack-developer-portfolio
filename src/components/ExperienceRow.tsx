@@ -31,7 +31,7 @@ export function ExperienceRow({ job, isLast }: ExperienceRowProps) {
 
           <button
             onClick={() => setOpen((v) => !v)}
-            className="font-mono text-xs px-3 py-1 rounded border border-[#E3E1DB] text-[#111110] hover:bg-[#F0EFEA] transition-colors flex items-center gap-1.5 shrink-0 self-end md:self-auto"
+            className="font-mono text-xs px-3 py-1 rounded-[2px] border border-[#E2DFD7] bg-[#FFFFFF] text-[#111110] hover:bg-[#FAF9F6] transition-colors flex items-center gap-1.5 shrink-0 self-end md:self-auto shadow-2xs"
             aria-expanded={open}
           >
             <span>{open ? "Less" : "More details"}</span>
@@ -50,7 +50,7 @@ export function ExperienceRow({ job, isLast }: ExperienceRowProps) {
 
         {/* Expanded Additional Details */}
         {open && (
-          <div className="mt-5 pt-5 border-t border-[#E3E1DB] bg-[#F0EFEA]/40 p-5 rounded space-y-4">
+          <div className="mt-5 p-5 sm:p-6 border border-[#E2DFD7] bg-[#FFFFFF] rounded-[3px] shadow-xs space-y-4">
             <p className="text-base text-[#111110] leading-relaxed">
               {job.description}
             </p>

@@ -1,11 +1,14 @@
 @import "tailwindcss";
 
 :root {
-  --bg: #F9F8F5;
+  --bg: #FAF9F6;
+  --bg-a: #FAF9F6;
+  --bg-b: #EFECE6;
   --fg: #111110;
   --muted: #54534F;
   --muted-dark: #2B2A28;
   --border: #E3E1DB;
+  --border-section: #E0DCD3;
   --accent: #14A800;
   --surface: #F0EFEA;
   --font-sans: var(--font-instrument-sans), system-ui, -apple-system, sans-serif;
@@ -14,9 +17,12 @@
 
 @theme {
   --color-bg: var(--bg);
+  --color-bg-a: var(--bg-a);
+  --color-bg-b: var(--bg-b);
   --color-fg: var(--fg);
   --color-muted: var(--muted);
   --color-border: var(--border);
+  --color-border-section: var(--border-section);
   --color-green: var(--accent);
   --color-surface: var(--surface);
 
@@ -133,9 +139,10 @@ textarea:focus-visible {
   letter-spacing: 0.04em;
   padding: 0.375rem 0.75rem;
   color: var(--fg);
-  background-color: var(--surface);
-  border: 1px solid #D6D4CE;
+  background-color: #FFFFFF;
+  border: 1px solid #E2DFD7;
   border-radius: 2px;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.02);
 }
 
 .tech-badge-learning {
@@ -190,6 +197,49 @@ textarea:focus-visible {
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: #3D3C38;
+}
+
+/* ─── Section Background Alternation System ─── */
+.section-bg-a {
+  background-color: var(--bg-a);
+}
+
+.section-bg-b {
+  background-color: var(--bg-b);
+}
+
+.section-border-b {
+  border-bottom: 1px solid var(--border-section);
+}
+
+/* ─── Infinite Smooth Marquee Carousel ─── */
+@keyframes marqueeLeft {
+  0% { transform: translate3d(0, 0, 0); }
+  100% { transform: translate3d(-50%, 0, 0); }
+}
+
+@keyframes marqueeRight {
+  0% { transform: translate3d(-50%, 0, 0); }
+  100% { transform: translate3d(0, 0, 0); }
+}
+
+.animate-marquee-left {
+  display: flex;
+  width: max-content;
+  will-change: transform;
+  animation: marqueeLeft 38s linear infinite;
+}
+
+.animate-marquee-right {
+  display: flex;
+  width: max-content;
+  will-change: transform;
+  animation: marqueeRight 38s linear infinite;
+}
+
+.marquee-container:hover .animate-marquee-left,
+.marquee-container:hover .animate-marquee-right {
+  animation-play-state: paused;
 }
 
 @keyframes slideInRight {

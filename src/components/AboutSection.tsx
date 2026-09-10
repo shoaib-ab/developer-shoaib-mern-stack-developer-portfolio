@@ -1,9 +1,5 @@
-import { Divider } from "./Divider"
 import { ProfileData } from "@/lib/types"
-
-const FRONTEND_TECH = ["React.js", "Next.js", "TypeScript", "Tailwind CSS"]
-const BACKEND_TECH = ["Node.js", "Express.js", "Nest.js", "REST APIs"]
-const DATA_TOOLING_TECH = ["MongoDB", "Stripe", "AWS", "Git"]
+import { TechCarousel } from "./TechCarousel"
 
 interface AboutSectionProps {
   sectionRef: (el: HTMLElement | null) => void
@@ -11,15 +7,15 @@ interface AboutSectionProps {
 }
 
 export function AboutSection({ sectionRef, profile }: AboutSectionProps) {
-  const headline = profile?.aboutHeadline || "Building software with care, precision, and production reliability."
   const p1 = profile?.aboutParagraph1 || "I'm a Full-Stack Developer with several years of experience building production applications that serve real users. I work across the entire stack — from crafting precise, performant frontends to designing clean, maintainable backend systems."
   const p2 = profile?.aboutParagraph2 || "My focus is on building things that last: scalable APIs, well-structured databases, and interfaces that don't get in the way. I care about code quality, clear architecture, and shipping work that holds up under real-world conditions."
+
   return (
     <section
       ref={sectionRef}
       id="about"
       aria-label="About Shoaib"
-      className="relative px-8 md:px-16 lg:px-24 pt-[108px] pb-[88px] scroll-mt-[68px]"
+      className="relative section-bg-a section-border-b px-8 md:px-16 lg:px-24 pt-[108px] pb-[88px] scroll-mt-[68px]"
     >
       <div className="max-w-7xl w-full mx-auto">
         <p className="section-label mb-8 md:mb-12">
@@ -27,7 +23,7 @@ export function AboutSection({ sectionRef, profile }: AboutSectionProps) {
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-20 items-stretch">
           
-          {/* Left Column: Headline + Supporting Key Metrics Block (Balances Height) */}
+          {/* Left Column: Headline + Supporting Key Metrics Block */}
           <div className="flex flex-col justify-between h-full space-y-8 reveal-on-scroll">
             <h2 className="section-title font-semibold">
               Engineer.
@@ -37,8 +33,8 @@ export function AboutSection({ sectionRef, profile }: AboutSectionProps) {
               Problem solver.
             </h2>
 
-            {/* Supporting Key Metrics to intentionally fill space & balance right column */}
-            <div className="pt-8 border-t border-[#E3E1DB] grid grid-cols-2 gap-6 max-w-sm">
+            {/* Supporting Key Metrics on elevated white card */}
+            <div className="bg-[#FFFFFF] border border-[#E0DCD3] rounded-[3px] p-6 grid grid-cols-2 gap-6 max-w-sm shadow-xs">
               <div>
                 <p className="font-mono text-2xl font-bold text-[#111110]">
                   4+ Years
@@ -58,67 +54,60 @@ export function AboutSection({ sectionRef, profile }: AboutSectionProps) {
             </div>
           </div>
 
-          {/* Right Column: Bio Paragraphs + Categorized Tech Stack */}
-          <div className="reveal-on-scroll reveal-delay-200">
-            <p className="text-[1.0625rem] text-[#111110] leading-[1.8] mb-6">
-              {p1}
-            </p>
-            <p className="text-[1.0625rem] text-[#4A4945] leading-[1.8] mb-8">
-              {p2}
-            </p>
-
-            {/* Core Technologies grouped into 3 category rows */}
-            <div className="border-t border-[#E3E1DB] pt-6">
-              <p className="section-label mb-4">
-                Core Technologies
+          {/* Right Column: Bio Paragraphs */}
+          <div className="reveal-on-scroll reveal-delay-200 flex flex-col justify-between">
+            <div className="space-y-6">
+              <p className="text-[1.0625rem] text-[#111110] leading-[1.8]">
+                {p1}
               </p>
-              
-              <div className="space-y-2.5">
-                {/* Row 1: Frontend */}
-                <div className="flex flex-wrap gap-2">
-                  {FRONTEND_TECH.map((tech) => (
-                    <span key={tech} className="tech-badge">
-                      {tech}
-                    </span>
-                  ))}
-                </div>
+              <p className="text-[1.0625rem] text-[#4A4945] leading-[1.8]">
+                {p2}
+              </p>
+            </div>
 
-                {/* Row 2: Backend */}
-                <div className="flex flex-wrap gap-2">
-                  {BACKEND_TECH.map((tech) => (
-                    <span key={tech} className="tech-badge">
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-
-                {/* Row 3: Data & Tooling */}
-                <div className="flex flex-wrap gap-2">
-                  {DATA_TOOLING_TECH.map((tech) => (
-                    <span key={tech} className="tech-badge">
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-
-                {/* Lightweight visual slot for future "Currently learning" */}
-                <div className="pt-3 border-t border-dashed border-[#E5E3DE] mt-4 flex items-center gap-3">
-                  <span className="font-mono text-[11px] text-[#787772] uppercase tracking-[0.06em]">
-                    Learning:
-                  </span>
-                  <div className="flex flex-wrap gap-2">
-                    <span className="tech-badge-learning">
-                      .NET / C#
-                    </span>
-                  </div>
-                </div>
+            {/* Engineering Principles highlight */}
+            <div className="pt-6 border-t border-[#E0DCD3] grid grid-cols-2 gap-4 mt-6">
+              <div className="flex items-start gap-2 text-xs font-mono text-[#3D3C38]">
+                <span className="text-[#14A800] font-bold">✓</span>
+                <span>Production API Architecture</span>
+              </div>
+              <div className="flex items-start gap-2 text-xs font-mono text-[#3D3C38]">
+                <span className="text-[#14A800] font-bold">✓</span>
+                <span>Sub-second Client Speed</span>
+              </div>
+              <div className="flex items-start gap-2 text-xs font-mono text-[#3D3C38]">
+                <span className="text-[#14A800] font-bold">✓</span>
+                <span>Type-Safe End-to-End</span>
+              </div>
+              <div className="flex items-start gap-2 text-xs font-mono text-[#3D3C38]">
+                <span className="text-[#14A800] font-bold">✓</span>
+                <span>Database Design & Scaling</span>
               </div>
             </div>
           </div>
 
         </div>
+
+        {/* Dedicated Technologies Infinite Marquee Carousel */}
+        <div className="mt-14 md:mt-20 pt-10 border-t border-[#E0DCD3] reveal-on-scroll">
+          <div className="flex flex-col sm:flex-row sm:items-baseline justify-between mb-6 gap-2">
+            <div>
+              <p className="section-label mb-1">
+                Ecosystem & Tooling
+              </p>
+              <h3 className="text-xl sm:text-2xl font-semibold tracking-tight text-[#111110]">
+                Technologies I Build With
+              </h3>
+            </div>
+            <p className="font-mono text-xs text-[#787772]">
+              Hover to pause • 20+ production tools
+            </p>
+          </div>
+
+          <TechCarousel />
+        </div>
+
       </div>
-      <Divider />
     </section>
   )
 }

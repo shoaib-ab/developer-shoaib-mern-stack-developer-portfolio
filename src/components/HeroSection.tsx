@@ -1,7 +1,6 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import { Divider } from "./Divider"
 import { ProfileData } from "@/lib/types"
 
 interface HeroSectionProps {
@@ -46,7 +45,7 @@ export function HeroSection({ sectionRef, onGoToWork, profile }: HeroSectionProp
       ref={sectionRef}
       id="home"
       aria-label="Introduction"
-      className="relative px-8 md:px-16 lg:px-24 pt-[108px] pb-[88px] scroll-mt-[68px]"
+      className="relative section-bg-b section-border-b px-8 md:px-16 lg:px-24 pt-[108px] pb-[88px] scroll-mt-[68px]"
     >
       <div className="max-w-7xl w-full mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
         
@@ -155,7 +154,6 @@ export function HeroSection({ sectionRef, onGoToWork, profile }: HeroSectionProp
         </div>
 
       </div>
-      <Divider />
     </section>
   )
 }

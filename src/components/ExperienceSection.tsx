@@ -1,6 +1,5 @@
 import { EXPERIENCE, ExperienceItem } from "@/data/experience"
 import { ExperienceRow } from "./ExperienceRow"
-import { Divider } from "./Divider"
 
 interface ExperienceSectionProps {
   sectionRef: (el: HTMLElement | null) => void
@@ -13,7 +12,7 @@ export function ExperienceSection({ sectionRef, experiences = EXPERIENCE }: Expe
       ref={sectionRef}
       id="experience"
       aria-label="Professional Experience"
-      className="relative px-8 md:px-16 lg:px-24 pt-[108px] pb-[88px] scroll-mt-[68px]"
+      className="relative section-bg-a section-border-b px-8 md:px-16 lg:px-24 pt-[108px] pb-[88px] scroll-mt-[68px]"
     >
       <div className="max-w-7xl w-full mx-auto">
         <p className="section-label mb-8 md:mb-12 reveal-on-scroll">
@@ -27,7 +26,6 @@ export function ExperienceSection({ sectionRef, experiences = EXPERIENCE }: Expe
           ))}
         </div>
       </div>
-      <Divider />
     </section>
   )
 }

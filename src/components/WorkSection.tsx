@@ -5,7 +5,6 @@ import Link from "next/link"
 import { ALL_PROJECTS, Project } from "@/data/projects"
 import { ProjectCard } from "./ProjectCard"
 import { ProjectModal } from "./ProjectModal"
-import { Divider } from "./Divider"
 
 interface WorkSectionProps {
   sectionRef: (el: HTMLElement | null) => void
@@ -21,7 +20,7 @@ export function WorkSection({ sectionRef, projects = ALL_PROJECTS }: WorkSection
       ref={sectionRef}
       id="work"
       aria-label="Selected Work"
-      className="relative px-8 md:px-16 lg:px-24 pt-[108px] pb-[88px] scroll-mt-[68px]"
+      className="relative section-bg-b section-border-b px-8 md:px-16 lg:px-24 pt-[108px] pb-[88px] scroll-mt-[68px]"
     >
       <div className="max-w-7xl w-full mx-auto">
         {/* Section Header */}
@@ -87,8 +86,6 @@ export function WorkSection({ sectionRef, projects = ALL_PROJECTS }: WorkSection
         project={selectedProject}
         onClose={() => setSelectedProject(null)}
       />
-
-      <Divider />
     </section>
   )
 }

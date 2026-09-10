@@ -43,7 +43,7 @@ export function Header({ currentSection, onGoToSection }: HeaderProps) {
   }, [currentSection])
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 h-[68px] bg-[#F9F8F5]/85 backdrop-blur-md border-b border-[#E5E3DE]/80 transition-all duration-300">
+    <header className="fixed top-0 left-0 right-0 z-50 h-[68px] bg-[#FAF9F6]/75 backdrop-blur-md border-b border-[#E0DCD3]/90 transition-all duration-300">
       <div className="max-w-7xl mx-auto h-full px-6 md:px-12 flex items-center justify-between relative">
         {/* Brand Logo (Left) */}
         <div className="flex items-center z-10">

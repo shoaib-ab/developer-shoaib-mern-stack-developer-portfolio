@@ -1,5 +1,4 @@
 import { EDUCATION, EducationItem } from "@/data/education"
-import { Divider } from "./Divider"
 
 interface EducationSectionProps {
   sectionRef: (el: HTMLElement | null) => void
@@ -12,7 +11,7 @@ export function EducationSection({ sectionRef, education = EDUCATION }: Educatio
       ref={sectionRef}
       id="education"
       aria-label="Education"
-      className="relative px-8 md:px-16 lg:px-24 pt-[108px] pb-[88px] scroll-mt-[68px]"
+      className="relative section-bg-b section-border-b px-8 md:px-16 lg:px-24 pt-[108px] pb-[88px] scroll-mt-[68px]"
     >
       <div className="max-w-7xl w-full mx-auto">
         <p className="section-label mb-8 md:mb-12 reveal-on-scroll">
@@ -48,7 +47,6 @@ export function EducationSection({ sectionRef, education = EDUCATION }: Educatio
           ))}
         </div>
       </div>
-      <Divider />
     </section>
   )
 }
