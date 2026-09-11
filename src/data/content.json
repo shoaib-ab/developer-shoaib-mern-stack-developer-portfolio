@@ -20,63 +20,6 @@
   },
   "projects": [
     {
-      "id": "trucky-guy",
-      "title": "Trucky Guy",
-      "category": "Full-Stack",
-      "year": "2024",
-      "featured": true,
-      "description": "A European freight logistics and transport dispatch web application featuring instant shipping quote requests, route coordination, and bilingual service coverage.",
-      "about": "Trucky Guy is a modern logistics and freight dispatch platform based in Dorsten, North Rhine-Westphalia, Germany. The web application streamlines cargo and parcel transport across major European freight corridors, offering instant transport quote requests, multimodal freight options (Express Sprinter, LTL partial loads, and FTL full truckloads), bilingual localization (German & English), and direct dispatch routing.",
-      "features": [
-        "Instant transport request submission and automated cargo quotation calculator",
-        "Multimodal freight tier selection: Express courier vans, partial loads (LTL), and full truckloads (FTL)",
-        "Bilingual localization supporting both German and English users",
-        "Interactive FAQ, contact coordination, and GDPR-compliant inquiry processing",
-        "High-performance responsive interface designed for dispatchers and freight clients"
-      ],
-      "tags": ["React", "TypeScript", "Tailwind CSS", "Vite", "REST APIs"],
-      "image": "/projects/trucky-guy.svg",
-      "liveUrl": "https://trucky-guy.vercel.app/"
-    },
-    {
-      "id": "etisalat-channel-partner",
-      "title": "Etisalat Channel Partner Portal",
-      "category": "Frontend",
-      "year": "2024",
-      "featured": true,
-      "description": "High-converting promotional telecom landing page built at Infinite Market Solutions for authorized Etisalat by e& channel partners, featuring fiber package comparisons and address coverage checks.",
-      "about": "Developed during tenure at Infinite Market Solutions for authorized Etisalat by e& channel partners in the UAE. The landing page is engineered for high-intent paid search campaigns (Google Ads), featuring interactive eLife fiber broadband and 5G home package comparisons, Google Maps API address verification for fiber readiness, instant callback lead capture, and brand-compliant UAE telecom design.",
-      "features": [
-        "Interactive eLife fiber internet & 5G home package comparison with speed tier filters",
-        "Integrated Google Maps API for real-time UAE address verification & fiber coverage check",
-        "High-conversion lead capture form with instant validation and callback dispatch",
-        "Campaign-optimized layout designed for PPC performance and zero-latency loading",
-        "Fully responsive mobile-first architecture adhering to official Etisalat by e& brand guidelines"
-      ],
-      "tags": ["React", "TypeScript", "Tailwind CSS", "Google Maps API", "Vite"],
-      "image": "/projects/etisalat-partner.png",
-      "liveUrl": "https://etisalat-a787.vercel.app/"
-    },
-    {
-      "id": "du-channel-partner",
-      "title": "du Telecom Channel Partner Portal",
-      "category": "Frontend",
-      "year": "2024",
-      "featured": true,
-      "description": "Promotional broadband landing page created at Infinite Market Solutions for authorized du Telecom partners, showcasing 5G wireless routers, fiber bundles, and exclusive 15% discount offers.",
-      "about": "Built at Infinite Market Solutions for authorized du Telecom channel partners across the United Arab Emirates. The platform is designed to drive qualified customer acquisitions for du Home Wireless 5G and Home Fiber broadband packages. It highlights promotional campaigns (15% exclusive discount, zero installation fee), integrated Google Tag Manager analytics, ClickCease click-fraud mitigation, and high-converting lead capture.",
-      "features": [
-        "Curated showcase for du 5G Home Wireless & du Fiber Power broadband tiers",
-        "Dynamic promotional badge integration highlighting 15% discounts & free installation",
-        "Integrated lead capture form with instant emirate selection and phone validation",
-        "Ad traffic optimization with Google Tag Manager and ClickCease anti-fraud tracking",
-        "High-performance responsive UI styled in du telecom's signature vibrant turquoise palette"
-      ],
-      "tags": ["React", "JavaScript", "Tailwind CSS", "Vite", "Analytics"],
-      "image": "/projects/du-partner.png",
-      "liveUrl": "https://du-clone-two.vercel.app/"
-    },
-    {
       "id": "backpackwander-com",
       "title": "Backpack Wander GmbH",
       "category": "Full-Stack",
@@ -96,25 +39,6 @@
       "liveUrl": "https://www.backpackwander.com/"
     },
     {
-      "id": "backpackwander-org",
-      "title": "Backpack Wander Community",
-      "category": "Full-Stack",
-      "year": "2024",
-      "featured": true,
-      "description": "An outdoor lifestyle and digital nomad community platform connecting remote creators, adventurers, and retreat organizers.",
-      "about": "Backpack Wander Zajednica (Community) is a community hub dedicated to digital nomads, nature explorers, and eco-conscious travelers. The platform features travel companion matching, outdoor retreat schedules, creative community showcases, multi-language support, and interactive event registrations.",
-      "features": [
-        "Travel companion matching system for remote workers and solo adventurers",
-        "Community event and retreat discovery with interactive registration",
-        "Multi-lingual localization support (English, German, Serbian)",
-        "Dynamic story feed and member spotlight showcases",
-        "Mobile-first responsive UX with nature-inspired visual design"
-      ],
-      "tags": ["React", "TypeScript", "Tailwind CSS", "Node.js", "REST APIs"],
-      "image": "/projects/backpackwander-org.png",
-      "liveUrl": "https://www.backpackwander.org/"
-    },
-    {
       "id": "primetaxsoftware",
       "title": "Prime Tax Software",
       "category": "Full-Stack",
@@ -132,25 +56,6 @@
       "tags": ["React", "TypeScript", "Tailwind CSS", "Node.js", "FinTech", "REST APIs"],
       "image": "/projects/primetaxsoftware.png",
       "liveUrl": "https://primetaxsoftware.com/"
-    },
-    {
-      "id": "setfreeway",
-      "title": "Set Freeway",
-      "category": "Full-Stack",
-      "year": "2024",
-      "featured": true,
-      "description": "A smart freight dispatch and fleet routing web application featuring real-time shipment telemetry, carrier mapping, and compliance tracking.",
-      "about": "Set Freeway is a freight logistics and fleet management platform engineered for freight forwarders and carrier dispatchers. The web app integrates real-time geospatial tracking, automated route compliance checks, multi-driver dispatch queues, and live transit telemetry dashboards.",
-      "features": [
-        "Live geospatial fleet routing map with active driver telemetry",
-        "Multi-status shipment tracking cards with real-time ETA calculation",
-        "Automated carrier dispatch queue and load assignment workflows",
-        "Analytics dashboard tracking transit time compliance and driver utilization",
-        "High-contrast dark mode dashboard optimized for dispatcher multi-screen setups"
-      ],
-      "tags": ["React", "TypeScript", "Tailwind CSS", "Node.js", "Mapbox", "REST APIs"],
-      "image": "/projects/setfreeway.png",
-      "liveUrl": "https://set-free-way-latest.vercel.app/"
     },
     {
       "id": "rixdu",
@@ -191,6 +96,44 @@
       "liveUrl": "https://jinnar.com/"
     },
     {
+      "id": "infinite-market-solutions-website",
+      "title": "Infinite Market Solutions",
+      "category": "Full-Stack",
+      "year": "2024",
+      "featured": true,
+      "description": "A corporate platform designed to showcase Infinite Market Solutions' digital marketing expertise and services with interactive showcases and lead generation forms.",
+      "about": "A comprehensive corporate website designed to showcase Infinite Market Solutions' digital marketing expertise and service offerings. The platform features a modern, responsive design with seamless navigation, optimized for lead generation and client engagement across all devices.",
+      "features": [
+        "Fully responsive design optimized for mobile, tablet, and desktop",
+        "Interactive service showcase with smooth animations",
+        "Integrated contact forms with real-time validation",
+        "SEO-optimized content structure for enhanced search visibility",
+        "Fast page load times with Next.js static and server optimization"
+      ],
+      "tags": ["Next.js", "React", "Tailwind CSS", "Framer Motion", "TypeScript"],
+      "image": "/projects/infinite-market-solutions.png",
+      "liveUrl": "https://infinitemarketsolutions.ae/"
+    },
+    {
+      "id": "backpackwander-org",
+      "title": "Backpack Wander Community",
+      "category": "Full-Stack",
+      "year": "2024",
+      "featured": true,
+      "description": "An outdoor lifestyle and digital nomad community platform connecting remote creators, adventurers, and retreat organizers.",
+      "about": "Backpack Wander Zajednica (Community) is a community hub dedicated to digital nomads, nature explorers, and eco-conscious travelers. The platform features travel companion matching, outdoor retreat schedules, creative community showcases, multi-language support, and interactive event registrations.",
+      "features": [
+        "Travel companion matching system for remote workers and solo adventurers",
+        "Community event and retreat discovery with interactive registration",
+        "Multi-lingual localization support (English, German, Serbian)",
+        "Dynamic story feed and member spotlight showcases",
+        "Mobile-first responsive UX with nature-inspired visual design"
+      ],
+      "tags": ["React", "TypeScript", "Tailwind CSS", "Node.js", "REST APIs"],
+      "image": "/projects/backpackwander-org.png",
+      "liveUrl": "https://www.backpackwander.org/"
+    },
+    {
       "id": "training-jinnar",
       "title": "Training Jinnar",
       "category": "Full-Stack",
@@ -210,23 +153,80 @@
       "liveUrl": "https://training.jinnar.com/"
     },
     {
-      "id": "infinite-market-solutions-website",
-      "title": "Infinite Market Solutions",
+      "id": "etisalat-channel-partner",
+      "title": "Etisalat Channel Partner Portal",
+      "category": "Frontend",
+      "year": "2024",
+      "featured": true,
+      "description": "High-converting promotional telecom landing page built at Infinite Market Solutions for authorized Etisalat by e& channel partners, featuring fiber package comparisons and address coverage checks.",
+      "about": "Developed during tenure at Infinite Market Solutions for authorized Etisalat by e& channel partners in the UAE. The landing page is engineered for high-intent paid search campaigns (Google Ads), featuring interactive eLife fiber broadband and 5G home package comparisons, Google Maps API address verification for fiber readiness, instant callback lead capture, and brand-compliant UAE telecom design.",
+      "features": [
+        "Interactive eLife fiber internet & 5G home package comparison with speed tier filters",
+        "Integrated Google Maps API for real-time UAE address verification & fiber coverage check",
+        "High-conversion lead capture form with instant validation and callback dispatch",
+        "Campaign-optimized layout designed for PPC performance and zero-latency loading",
+        "Fully responsive mobile-first architecture adhering to official Etisalat by e& brand guidelines"
+      ],
+      "tags": ["React", "TypeScript", "Tailwind CSS", "Google Maps API", "Vite"],
+      "image": "/projects/etisalat-partner.png",
+      "liveUrl": "https://etisalat-a787.vercel.app/"
+    },
+    {
+      "id": "du-channel-partner",
+      "title": "du Telecom Channel Partner Portal",
+      "category": "Frontend",
+      "year": "2024",
+      "featured": true,
+      "description": "Promotional broadband landing page created at Infinite Market Solutions for authorized du Telecom partners, showcasing 5G wireless routers, fiber bundles, and exclusive 15% discount offers.",
+      "about": "Built at Infinite Market Solutions for authorized du Telecom channel partners across the United Arab Emirates. The platform is designed to drive qualified customer acquisitions for du Home Wireless 5G and Home Fiber broadband packages. It highlights promotional campaigns (15% exclusive discount, zero installation fee), integrated Google Tag Manager analytics, ClickCease click-fraud mitigation, and high-converting lead capture.",
+      "features": [
+        "Curated showcase for du 5G Home Wireless & du Fiber Power broadband tiers",
+        "Dynamic promotional badge integration highlighting 15% discounts & free installation",
+        "Integrated lead capture form with instant emirate selection and phone validation",
+        "Ad traffic optimization with Google Tag Manager and ClickCease anti-fraud tracking",
+        "High-performance responsive UI styled in du telecom's signature vibrant turquoise palette"
+      ],
+      "tags": ["React", "JavaScript", "Tailwind CSS", "Vite", "Analytics"],
+      "image": "/projects/du-partner.png",
+      "liveUrl": "https://du-clone-two.vercel.app/"
+    },
+    {
+      "id": "setfreeway",
+      "title": "Set Freeway",
       "category": "Full-Stack",
       "year": "2024",
       "featured": true,
-      "description": "A corporate platform designed to showcase Infinite Market Solutions' digital marketing expertise and services with interactive showcases and lead generation forms.",
-      "about": "A comprehensive corporate website designed to showcase Infinite Market Solutions' digital marketing expertise and service offerings. The platform features a modern, responsive design with seamless navigation, optimized for lead generation and client engagement across all devices.",
+      "description": "A smart freight dispatch and fleet routing web application featuring real-time shipment telemetry, carrier mapping, and compliance tracking.",
+      "about": "Set Freeway is a freight logistics and fleet management platform engineered for freight forwarders and carrier dispatchers. The web app integrates real-time geospatial tracking, automated route compliance checks, multi-driver dispatch queues, and live transit telemetry dashboards.",
       "features": [
-        "Fully responsive design optimized for mobile, tablet, and desktop",
-        "Interactive service showcase with smooth animations",
-        "Integrated contact forms with real-time validation",
-        "SEO-optimized content structure for enhanced search visibility",
-        "Fast page load times with Next.js static and server optimization"
+        "Live geospatial fleet routing map with active driver telemetry",
+        "Multi-status shipment tracking cards with real-time ETA calculation",
+        "Automated carrier dispatch queue and load assignment workflows",
+        "Analytics dashboard tracking transit time compliance and driver utilization",
+        "High-contrast dark mode dashboard optimized for dispatcher multi-screen setups"
       ],
-      "tags": ["Next.js", "React", "Tailwind CSS", "Framer Motion", "TypeScript"],
-      "image": "/projects/infinite-market-solutions.png",
-      "liveUrl": "https://infinitemarketsolutions.ae/"
+      "tags": ["React", "TypeScript", "Tailwind CSS", "Node.js", "Mapbox", "REST APIs"],
+      "image": "/projects/setfreeway.png",
+      "liveUrl": "https://set-free-way-latest.vercel.app/"
+    },
+    {
+      "id": "trucky-guy",
+      "title": "Trucky Guy",
+      "category": "Full-Stack",
+      "year": "2024",
+      "featured": true,
+      "description": "A European freight logistics and transport dispatch web application featuring instant shipping quote requests, route coordination, and bilingual service coverage.",
+      "about": "Trucky Guy is a modern logistics and freight dispatch platform based in Dorsten, North Rhine-Westphalia, Germany. The web application streamlines cargo and parcel transport across major European freight corridors, offering instant transport quote requests, multimodal freight options (Express Sprinter, LTL partial loads, and FTL full truckloads), bilingual localization (German & English), and direct dispatch routing.",
+      "features": [
+        "Instant transport request submission and automated cargo quotation calculator",
+        "Multimodal freight tier selection: Express courier vans, partial loads (LTL), and full truckloads (FTL)",
+        "Bilingual localization supporting both German and English users",
+        "Interactive FAQ, contact coordination, and GDPR-compliant inquiry processing",
+        "High-performance responsive interface designed for dispatchers and freight clients"
+      ],
+      "tags": ["React", "TypeScript", "Tailwind CSS", "Vite", "REST APIs"],
+      "image": "/projects/trucky-guy.svg",
+      "liveUrl": "https://trucky-guy.vercel.app/"
     },
     {
       "id": "infinite-market-fusion",
