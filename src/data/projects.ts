@@ -15,6 +15,90 @@ export interface Project {
 
 export const ALL_PROJECTS: Project[] = [
   {
+    id: "backpackwander-com",
+    title: "Backpack Wander GmbH",
+    category: "Full-Stack",
+    year: "2024",
+    featured: true,
+    description:
+      "Engineering oversight & quality management web platform for offshore wind farms, subsea pipelines, and heavy industrial infrastructure.",
+    about:
+      "Backpack Wander GmbH is an industrial engineering portal offering QA/QC oversight, non-destructive testing (NDT), pipeline integrity monitoring, and offshore wind farm inspection coordination. The web application features interactive technical service catalogs, multi-language internationalization (English/German), client project inquiry workflows, and compliance document exchange.",
+    features: [
+      "Multi-language internationalization architecture (EN/DE/SR)",
+      "Offshore & industrial engineering service showcases with technical specification briefs",
+      "Direct project scoping and industrial consultation inquiry flows",
+      "Responsive high-performance layout with dark glassmorphism engineering aesthetics",
+      "Optimized SEO metadata and structured corporate schema markup",
+    ],
+    tags: ["Next.js", "TypeScript", "Tailwind CSS", "React", "Internationalization"],
+    image: "/projects/backpackwander-com.png",
+    liveUrl: "https://www.backpackwander.com/",
+  },
+  {
+    id: "backpackwander-org",
+    title: "Backpack Wander Community",
+    category: "Full-Stack",
+    year: "2024",
+    featured: true,
+    description:
+      "An outdoor lifestyle and digital nomad community platform connecting remote creators, adventurers, and retreat organizers.",
+    about:
+      "Backpack Wander Zajednica (Community) is a community hub dedicated to digital nomads, nature explorers, and eco-conscious travelers. The platform features travel companion matching, outdoor retreat schedules, creative community showcases, multi-language support, and interactive event registrations.",
+    features: [
+      "Travel companion matching system for remote workers and solo adventurers",
+      "Community event and retreat discovery with interactive registration",
+      "Multi-lingual localization support (English, German, Serbian)",
+      "Dynamic story feed and member spotlight showcases",
+      "Mobile-first responsive UX with nature-inspired visual design",
+    ],
+    tags: ["React", "TypeScript", "Tailwind CSS", "Node.js", "REST APIs"],
+    image: "/projects/backpackwander-org.png",
+    liveUrl: "https://www.backpackwander.org/",
+  },
+  {
+    id: "primetaxsoftware",
+    title: "Prime Tax Software",
+    category: "Full-Stack",
+    year: "2024",
+    featured: true,
+    description:
+      "A B2B FinTech platform and service bureau providing tax professionals with software enrollment, bank product integrations, and rebate management.",
+    about:
+      "Prime Tax Software is a full-service tax professional portal designed to help independent tax preparers and service bureaus scale their tax businesses. The platform offers multi-tier software enrollment, IRS e-file compliance tools, integrated bank product solutions, and automated rebate tracking with an executive demo scheduling pipeline.",
+    features: [
+      "B2B client onboarding and digital tax software enrollment application",
+      "Integrated tax bank product selector and incentive rebate calculator",
+      "Interactive live demo scheduling with automated calendar integration",
+      "Secure document submission and compliance verification portal",
+      "High-converting dark gold & slate luxury FinTech UI system",
+    ],
+    tags: ["React", "TypeScript", "Tailwind CSS", "Node.js", "FinTech", "REST APIs"],
+    image: "/projects/primetaxsoftware.png",
+    liveUrl: "https://primetaxsoftware.com/",
+  },
+  {
+    id: "setfreeway",
+    title: "Set Freeway",
+    category: "Full-Stack",
+    year: "2024",
+    featured: true,
+    description:
+      "A smart freight dispatch and fleet routing web application featuring real-time shipment telemetry, carrier mapping, and compliance tracking.",
+    about:
+      "Set Freeway is a freight logistics and fleet management platform engineered for freight forwarders and carrier dispatchers. The web app integrates real-time geospatial tracking, automated route compliance checks, multi-driver dispatch queues, and live transit telemetry dashboards.",
+    features: [
+      "Live geospatial fleet routing map with active driver telemetry",
+      "Multi-status shipment tracking cards with real-time ETA calculation",
+      "Automated carrier dispatch queue and load assignment workflows",
+      "Analytics dashboard tracking transit time compliance and driver utilization",
+      "High-contrast dark mode dashboard optimized for dispatcher multi-screen setups",
+    ],
+    tags: ["React", "TypeScript", "Tailwind CSS", "Node.js", "Mapbox", "REST APIs"],
+    image: "/projects/setfreeway.png",
+    liveUrl: "https://setfreeway.com/",
+  },
+  {
     id: "rixdu",
     title: "Rixdu",
     category: "Full-Stack",
