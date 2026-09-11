@@ -20,6 +20,63 @@
   },
   "projects": [
     {
+      "id": "rixdu",
+      "title": "Rixdu",
+      "category": "Full-Stack",
+      "year": "2024",
+      "featured": true,
+      "description": "A modern furniture and interior decor e-commerce platform offering curated collections, interactive product showcases, and seamless checkout.",
+      "about": "Rixdu is a contemporary furniture and home decor e-commerce platform crafted to deliver a seamless shopping experience for interior enthusiasts and homeowners. The platform showcases curated collections—from living room centerpieces to modern dining sets—backed by dynamic product filtering, responsive galleries, and lightning-fast checkout flow.",
+      "features": [
+        "Curated product catalog with multi-category filtering (Living, Dining, Bedroom)",
+        "High-resolution image galleries with interactive preview zoom",
+        "Seamless shopping cart state management with persistent sessions",
+        "Optimized responsive UI with smooth micro-interactions",
+        "Integrated inquiry and contact routing for custom interior orders"
+      ],
+      "tags": ["React", "TypeScript", "Tailwind CSS", "Vite", "REST APIs"],
+      "image": "/projects/rixdu.png",
+      "liveUrl": "https://www.rixdu.com/"
+    },
+    {
+      "id": "jinnar",
+      "title": "Jinnar",
+      "category": "Full-Stack",
+      "year": "2024",
+      "featured": true,
+      "description": "A Pan-African multi-vendor e-commerce marketplace empowering local artisans, merchants, and international shoppers with multi-currency trade.",
+      "about": "Jinnar is an expansive Pan-African marketplace engineered to connect African merchants, creative producers, and consumers across borders. The platform supports multi-currency transactions, localized logistics tracking, seller storefront management, and high-conversion product discovery across fashion, electronics, art, and groceries.",
+      "features": [
+        "Multi-vendor merchant onboarding and product catalog management",
+        "Multi-currency price conversion and localized payment gateways",
+        "Advanced product search with auto-suggest and faceted filtering",
+        "Real-time order tracking and seller fulfillment notifications",
+        "High-performance responsive interface designed for low-bandwidth regions"
+      ],
+      "tags": ["React", "Node.js", "Express", "MongoDB", "Tailwind CSS", "REST APIs"],
+      "image": "/projects/jinnar.png",
+      "liveUrl": "https://jinnar.com/"
+    },
+    {
+      "id": "training-jinnar",
+      "title": "Training Jinnar",
+      "category": "Full-Stack",
+      "year": "2024",
+      "featured": true,
+      "description": "An interactive learning management system offering curated professional certification programs, live mentor sessions, and progress tracking.",
+      "about": "Training Jinnar is the dedicated educational ecosystem of Jinnar, built to equip professionals, students, and entrepreneurs with in-demand technical, business, and digital skills. The platform features structured curriculum tracks, video lecture streaming, automated quiz evaluations, and verifiable certification badges.",
+      "features": [
+        "Structured course curricula with modular lesson tracks and syllabus roadmaps",
+        "Interactive video player with progress tracking and bookmarking",
+        "Automated student assessment quizzes with instant evaluation",
+        "Direct instructor Q&A messaging and cohort discussion forums",
+        "Downloadable certificates of completion with unique verification IDs"
+      ],
+      "tags": ["React", "TypeScript", "Node.js", "MongoDB", "Tailwind CSS", "LMS"],
+      "image": "/projects/training-jinnar.png",
+      "liveUrl": "https://training.jinnar.com/"
+    },
+    {
       "id": "infinite-market-solutions-website",
       "title": "Infinite Market Solutions",
       "category": "Full-Stack",
