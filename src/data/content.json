@@ -20,6 +20,63 @@
   },
   "projects": [
     {
+      "id": "trucky-guy",
+      "title": "Trucky Guy",
+      "category": "Full-Stack",
+      "year": "2024",
+      "featured": true,
+      "description": "A European freight logistics and transport dispatch web application featuring instant shipping quote requests, route coordination, and bilingual service coverage.",
+      "about": "Trucky Guy is a modern logistics and freight dispatch platform based in Dorsten, North Rhine-Westphalia, Germany. The web application streamlines cargo and parcel transport across major European freight corridors, offering instant transport quote requests, multimodal freight options (Express Sprinter, LTL partial loads, and FTL full truckloads), bilingual localization (German & English), and direct dispatch routing.",
+      "features": [
+        "Instant transport request submission and automated cargo quotation calculator",
+        "Multimodal freight tier selection: Express courier vans, partial loads (LTL), and full truckloads (FTL)",
+        "Bilingual localization supporting both German and English users",
+        "Interactive FAQ, contact coordination, and GDPR-compliant inquiry processing",
+        "High-performance responsive interface designed for dispatchers and freight clients"
+      ],
+      "tags": ["React", "TypeScript", "Tailwind CSS", "Vite", "REST APIs"],
+      "image": "/projects/trucky-guy.svg",
+      "liveUrl": "https://trucky-guy.vercel.app/"
+    },
+    {
+      "id": "etisalat-channel-partner",
+      "title": "Etisalat Channel Partner Portal",
+      "category": "Frontend",
+      "year": "2024",
+      "featured": true,
+      "description": "High-converting promotional telecom landing page built at Infinite Market Solutions for authorized Etisalat by e& channel partners, featuring fiber package comparisons and address coverage checks.",
+      "about": "Developed during tenure at Infinite Market Solutions for authorized Etisalat by e& channel partners in the UAE. The landing page is engineered for high-intent paid search campaigns (Google Ads), featuring interactive eLife fiber broadband and 5G home package comparisons, Google Maps API address verification for fiber readiness, instant callback lead capture, and brand-compliant UAE telecom design.",
+      "features": [
+        "Interactive eLife fiber internet & 5G home package comparison with speed tier filters",
+        "Integrated Google Maps API for real-time UAE address verification & fiber coverage check",
+        "High-conversion lead capture form with instant validation and callback dispatch",
+        "Campaign-optimized layout designed for PPC performance and zero-latency loading",
+        "Fully responsive mobile-first architecture adhering to official Etisalat by e& brand guidelines"
+      ],
+      "tags": ["React", "TypeScript", "Tailwind CSS", "Google Maps API", "Vite"],
+      "image": "/projects/etisalat-partner.png",
+      "liveUrl": "https://etisalat-a787.vercel.app/"
+    },
+    {
+      "id": "du-channel-partner",
+      "title": "du Telecom Channel Partner Portal",
+      "category": "Frontend",
+      "year": "2024",
+      "featured": true,
+      "description": "Promotional broadband landing page created at Infinite Market Solutions for authorized du Telecom partners, showcasing 5G wireless routers, fiber bundles, and exclusive 15% discount offers.",
+      "about": "Built at Infinite Market Solutions for authorized du Telecom channel partners across the United Arab Emirates. The platform is designed to drive qualified customer acquisitions for du Home Wireless 5G and Home Fiber broadband packages. It highlights promotional campaigns (15% exclusive discount, zero installation fee), integrated Google Tag Manager analytics, ClickCease click-fraud mitigation, and high-converting lead capture.",
+      "features": [
+        "Curated showcase for du 5G Home Wireless & du Fiber Power broadband tiers",
+        "Dynamic promotional badge integration highlighting 15% discounts & free installation",
+        "Integrated lead capture form with instant emirate selection and phone validation",
+        "Ad traffic optimization with Google Tag Manager and ClickCease anti-fraud tracking",
+        "High-performance responsive UI styled in du telecom's signature vibrant turquoise palette"
+      ],
+      "tags": ["React", "JavaScript", "Tailwind CSS", "Vite", "Analytics"],
+      "image": "/projects/du-partner.png",
+      "liveUrl": "https://du-clone-two.vercel.app/"
+    },
+    {
       "id": "backpackwander-com",
       "title": "Backpack Wander GmbH",
       "category": "Full-Stack",
@@ -93,7 +150,7 @@
       ],
       "tags": ["React", "TypeScript", "Tailwind CSS", "Node.js", "Mapbox", "REST APIs"],
       "image": "/projects/setfreeway.png",
-      "liveUrl": "https://setfreeway.com/"
+      "liveUrl": "https://set-free-way-latest.vercel.app/"
     },
     {
       "id": "rixdu",
