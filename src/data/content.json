@@ -7,6 +7,7 @@
     "heroBio": "I engineer scalable web platforms, interactive frontends, and reliable backend APIs with React, Next.js, TypeScript, Node.js, and modern cloud infrastructure.",
     "aboutHeadline": "Building digital solutions with care, precision, and production reliability.",
     "aboutParagraph1": "I'm a full-stack developer with extensive experience building production applications for commercial clients and enterprises. My work spans high-conversion corporate web platforms, e-commerce applications with Stripe, real-time analytics dashboards, and responsive frontends.",
+    "aboutParagraph2": "I focus on writing clean, maintainable TypeScript and building fast, resilient architectures that deliver tangible business results and delightful user experiences.",
     "email": "shoaibbinallahbakhsh@gmail.com",
     "phone": "+92 308 8923063",
     "whatsapp": "+92 308 8923063",
@@ -14,7 +15,7 @@
     "location": "Bahawalpur, Pakistan",
     "githubUrl": "https://github.com/shoaib-ab",
     "linkedinUrl": "https://www.linkedin.com/in/developershoaib/",
-    "resumeUrl": "/resume.pdf",
+    "resumeUrl": "/uploads/muhammad-shoaib-mern-stack-resume_1789699694197.pdf",
     "contactHeadline": "Have a role or\nproject in mind?",
     "contactSubtext": "I'm open to full-time engineering roles and selective contract engagements. If you're building something that requires a reliable full-stack developer, let's talk."
   },
@@ -34,7 +35,13 @@
         "Responsive high-performance layout with dark glassmorphism engineering aesthetics",
         "Optimized SEO metadata and structured corporate schema markup"
       ],
-      "tags": ["Next.js", "TypeScript", "Tailwind CSS", "React", "Internationalization"],
+      "tags": [
+        "Next.js",
+        "TypeScript",
+        "Tailwind CSS",
+        "React",
+        "Internationalization"
+      ],
       "image": "/projects/backpackwander-com.png",
       "liveUrl": "https://www.backpackwander.com/"
     },
@@ -53,7 +60,14 @@
         "Secure document submission and compliance verification portal",
         "High-converting dark gold & slate luxury FinTech UI system"
       ],
-      "tags": ["React", "TypeScript", "Tailwind CSS", "Node.js", "FinTech", "REST APIs"],
+      "tags": [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Node.js",
+        "FinTech",
+        "REST APIs"
+      ],
       "image": "/projects/primetaxsoftware.png",
       "liveUrl": "https://primetaxsoftware.com/"
     },
@@ -72,7 +86,13 @@
         "Optimized responsive UI with smooth micro-interactions",
         "Integrated inquiry and contact routing for custom interior orders"
       ],
-      "tags": ["React", "TypeScript", "Tailwind CSS", "Vite", "REST APIs"],
+      "tags": [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Vite",
+        "REST APIs"
+      ],
       "image": "/projects/rixdu.png",
       "liveUrl": "https://www.rixdu.com/"
     },
@@ -91,7 +111,14 @@
         "Real-time order tracking and seller fulfillment notifications",
         "High-performance responsive interface designed for low-bandwidth regions"
       ],
-      "tags": ["React", "Node.js", "Express", "MongoDB", "Tailwind CSS", "REST APIs"],
+      "tags": [
+        "React",
+        "Node.js",
+        "Express",
+        "MongoDB",
+        "Tailwind CSS",
+        "REST APIs"
+      ],
       "image": "/projects/jinnar.png",
       "liveUrl": "https://jinnar.com/"
     },
@@ -110,7 +137,13 @@
         "SEO-optimized content structure for enhanced search visibility",
         "Fast page load times with Next.js static and server optimization"
       ],
-      "tags": ["Next.js", "React", "Tailwind CSS", "Framer Motion", "TypeScript"],
+      "tags": [
+        "Next.js",
+        "React",
+        "Tailwind CSS",
+        "Framer Motion",
+        "TypeScript"
+      ],
       "image": "/projects/infinite-market-solutions.png",
       "liveUrl": "https://infinitemarketsolutions.ae/"
     },
@@ -129,7 +162,13 @@
         "Dynamic story feed and member spotlight showcases",
         "Mobile-first responsive UX with nature-inspired visual design"
       ],
-      "tags": ["React", "TypeScript", "Tailwind CSS", "Node.js", "REST APIs"],
+      "tags": [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Node.js",
+        "REST APIs"
+      ],
       "image": "/projects/backpackwander-org.png",
       "liveUrl": "https://www.backpackwander.org/"
     },
@@ -148,7 +187,14 @@
         "Direct instructor Q&A messaging and cohort discussion forums",
         "Downloadable certificates of completion with unique verification IDs"
       ],
-      "tags": ["React", "TypeScript", "Node.js", "MongoDB", "Tailwind CSS", "LMS"],
+      "tags": [
+        "React",
+        "TypeScript",
+        "Node.js",
+        "MongoDB",
+        "Tailwind CSS",
+        "LMS"
+      ],
       "image": "/projects/training-jinnar.png",
       "liveUrl": "https://training.jinnar.com/"
     },
@@ -167,7 +213,13 @@
         "Campaign-optimized layout designed for PPC performance and zero-latency loading",
         "Fully responsive mobile-first architecture adhering to official Etisalat by e& brand guidelines"
       ],
-      "tags": ["React", "TypeScript", "Tailwind CSS", "Google Maps API", "Vite"],
+      "tags": [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Google Maps API",
+        "Vite"
+      ],
       "image": "/projects/etisalat-partner.png",
       "liveUrl": "https://etisalat-a787.vercel.app/"
     },
@@ -186,7 +238,13 @@
         "Ad traffic optimization with Google Tag Manager and ClickCease anti-fraud tracking",
         "High-performance responsive UI styled in du telecom's signature vibrant turquoise palette"
       ],
-      "tags": ["React", "JavaScript", "Tailwind CSS", "Vite", "Analytics"],
+      "tags": [
+        "React",
+        "JavaScript",
+        "Tailwind CSS",
+        "Vite",
+        "Analytics"
+      ],
       "image": "/projects/du-partner.png",
       "liveUrl": "https://du-clone-two.vercel.app/"
     },
@@ -205,7 +263,14 @@
         "Analytics dashboard tracking transit time compliance and driver utilization",
         "High-contrast dark mode dashboard optimized for dispatcher multi-screen setups"
       ],
-      "tags": ["React", "TypeScript", "Tailwind CSS", "Node.js", "Mapbox", "REST APIs"],
+      "tags": [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Node.js",
+        "Mapbox",
+        "REST APIs"
+      ],
       "image": "/projects/setfreeway.png",
       "liveUrl": "https://set-free-way-latest.vercel.app/"
     },
@@ -224,7 +289,13 @@
         "Interactive FAQ, contact coordination, and GDPR-compliant inquiry processing",
         "High-performance responsive interface designed for dispatchers and freight clients"
       ],
-      "tags": ["React", "TypeScript", "Tailwind CSS", "Vite", "REST APIs"],
+      "tags": [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Vite",
+        "REST APIs"
+      ],
       "image": "/projects/trucky-guy.svg",
       "liveUrl": "https://trucky-guy.vercel.app/"
     },
@@ -243,7 +314,13 @@
         "Secure user authentication and role-based access",
         "Export functionality for automated reports and analytics"
       ],
-      "tags": ["Next.js", "React", "Chart.js", "Tailwind CSS", "TypeScript"],
+      "tags": [
+        "Next.js",
+        "React",
+        "Chart.js",
+        "Tailwind CSS",
+        "TypeScript"
+      ],
       "image": "/projects/infinite-market-fusion.png",
       "liveUrl": "https://infinitemarketfusion.com/"
     },
@@ -262,7 +339,13 @@
         "Custom CMS integration for streamlined content updates",
         "Performance-optimized image delivery and GDPR compliance"
       ],
-      "tags": ["Next.js", "React", "i18n", "Tailwind CSS", "TypeScript"],
+      "tags": [
+        "Next.js",
+        "React",
+        "i18n",
+        "Tailwind CSS",
+        "TypeScript"
+      ],
       "image": "/projects/bw-digit.png",
       "liveUrl": "https://bwdigit.de/"
     },
@@ -281,7 +364,13 @@
         "Wishlist and shopping cart persistence across browser sessions",
         "Mobile-first responsive layout with fast checkout flow"
       ],
-      "tags": ["Next.js", "React", "Stripe", "Tailwind CSS", "Headless CMS"],
+      "tags": [
+        "Next.js",
+        "React",
+        "Stripe",
+        "Tailwind CSS",
+        "Headless CMS"
+      ],
       "image": "/projects/origin-by-the-sea.png",
       "liveUrl": "https://originsbythesea.com/"
     },
@@ -300,7 +389,13 @@
         "User account management with past booking history",
         "Responsive design optimized for on-the-go bookings"
       ],
-      "tags": ["Next.js", "React", "Travel APIs", "Tailwind CSS", "Redux"],
+      "tags": [
+        "Next.js",
+        "React",
+        "Travel APIs",
+        "Tailwind CSS",
+        "Redux"
+      ],
       "image": "/projects/skymate-travels.png",
       "liveUrl": "https://updated-skymate-1aio.vercel.app/"
     },
@@ -319,7 +414,13 @@
         "Fluid micro-interactions and hover states",
         "Performance-optimized bundle size despite rich visual assets"
       ],
-      "tags": ["React", "Tailwind CSS", "Framer Motion", "Three.js", "TypeScript"],
+      "tags": [
+        "React",
+        "Tailwind CSS",
+        "Framer Motion",
+        "Three.js",
+        "TypeScript"
+      ],
       "image": "/projects/brainwave.png",
       "liveUrl": "https://moder-brainwave-design.netlify.app/"
     },
@@ -338,7 +439,12 @@
         "Trust indicators and security certifications",
         "Call-to-action optimization for customer conversions"
       ],
-      "tags": ["React", "Tailwind CSS", "Framer Motion", "TypeScript"],
+      "tags": [
+        "React",
+        "Tailwind CSS",
+        "Framer Motion",
+        "TypeScript"
+      ],
       "image": "/projects/bank-payment.png",
       "liveUrl": "https://modern-hoo-bank-payment.netlify.app/"
     },
@@ -356,7 +462,12 @@
         "Fully responsive layout across mobile and desktop viewports",
         "Lighthouse-optimized performance and clean semantic structure"
       ],
-      "tags": ["React", "CSS3", "JavaScript", "Responsive Design"],
+      "tags": [
+        "React",
+        "CSS3",
+        "JavaScript",
+        "Responsive Design"
+      ],
       "image": "/projects/modern-gpt.png",
       "liveUrl": "https://modern-design-gpt3.netlify.app/"
     },
@@ -375,7 +486,13 @@
         "Search and filter functionality across 100+ cryptocurrencies",
         "Mobile-responsive trading and tracking dashboard"
       ],
-      "tags": ["React", "Crypto APIs", "Chart.js", "CSS3", "Axios"],
+      "tags": [
+        "React",
+        "Crypto APIs",
+        "Chart.js",
+        "CSS3",
+        "Axios"
+      ],
       "image": "/projects/crypto-react.png",
       "liveUrl": "https://crypter-app.netlify.app/"
     },
@@ -393,7 +510,12 @@
         "Image gallery with lightbox preview functionality",
         "Google Maps integration for restaurant locations"
       ],
-      "tags": ["React", "CSS3", "JavaScript", "Form Validation"],
+      "tags": [
+        "React",
+        "CSS3",
+        "JavaScript",
+        "Form Validation"
+      ],
       "image": "/projects/dinning-site.png",
       "liveUrl": "https://resturant-dining-site.netlify.app/"
     },
@@ -411,7 +533,12 @@
         "Contact form with client-side input validation",
         "Smooth scrolling and section transitions"
       ],
-      "tags": ["HTML5", "CSS3", "Vanilla JavaScript", "GSAP"],
+      "tags": [
+        "HTML5",
+        "CSS3",
+        "Vanilla JavaScript",
+        "GSAP"
+      ],
       "image": "/projects/portfolio-website-js.png",
       "liveUrl": "https://shoaib-portfolio-site.netlify.app/"
     },
@@ -430,7 +557,12 @@
         "Emergency contact information prominently displayed",
         "WCAG 2.1 AA accessibility compliance"
       ],
-      "tags": ["HTML5", "CSS3", "JavaScript", "Bootstrap"],
+      "tags": [
+        "HTML5",
+        "CSS3",
+        "JavaScript",
+        "Bootstrap"
+      ],
       "image": "/projects/hospital-website.png",
       "liveUrl": "https://shoaib-hospital-website-project.netlify.app/"
     },
@@ -448,7 +580,12 @@
         "Student testimonials and course success stories",
         "Responsive grid layout for course cards"
       ],
-      "tags": ["HTML5", "CSS3", "JavaScript", "Bootstrap"],
+      "tags": [
+        "HTML5",
+        "CSS3",
+        "JavaScript",
+        "Bootstrap"
+      ],
       "image": "/projects/educational-website.png",
       "liveUrl": "https://shoaib-educational-website.netlify.app/"
     },
@@ -466,7 +603,13 @@
         "Technical server specifications presented clearly",
         "Customer testimonials and server uptime badges"
       ],
-      "tags": ["HTML5", "CSS3", "JavaScript", "Flexbox", "Grid"],
+      "tags": [
+        "HTML5",
+        "CSS3",
+        "JavaScript",
+        "Flexbox",
+        "Grid"
+      ],
       "image": "/projects/loruki.png",
       "liveUrl": "https://shoaib-loruki-website.netlify.app/"
     },
@@ -484,7 +627,12 @@
         "Chef profiles and restaurant origin story",
         "Contact and reservation inquiry forms"
       ],
-      "tags": ["HTML5", "CSS3", "JavaScript", "Responsive Design"],
+      "tags": [
+        "HTML5",
+        "CSS3",
+        "JavaScript",
+        "Responsive Design"
+      ],
       "image": "/projects/food-website.png",
       "githubUrl": "https://github.com/shoaib-ab/food-website"
     },
@@ -502,7 +650,12 @@
         "Category buttons generated dynamically from data",
         "Zero framework dependencies"
       ],
-      "tags": ["HTML5", "CSS3", "Vanilla JavaScript", "DOM Manipulation"],
+      "tags": [
+        "HTML5",
+        "CSS3",
+        "Vanilla JavaScript",
+        "DOM Manipulation"
+      ],
       "image": "/projects/food-menu-card-js.png",
       "liveUrl": "https://vanilla-js-menu-project.netlify.app/"
     },
@@ -520,7 +673,12 @@
         "Interactive project showcases with custom hover effects",
         "Smooth page transitions"
       ],
-      "tags": ["HTML5", "CSS3", "JavaScript", "Responsive Design"],
+      "tags": [
+        "HTML5",
+        "CSS3",
+        "JavaScript",
+        "Responsive Design"
+      ],
       "image": "/projects/portfolio-practice-project.png",
       "liveUrl": "https://shoaib-portfolio-website.netlify.app/"
     }
