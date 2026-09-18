@@ -43,20 +43,56 @@ export function Header({ currentSection, onGoToSection }: HeaderProps) {
   }, [currentSection])
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 h-[68px] bg-[#FAF9F6]/75 backdrop-blur-md border-b border-[#E0DCD3]/90 transition-all duration-300">
-      <div className="max-w-7xl mx-auto h-full px-6 md:px-12 flex items-center justify-between relative">
+    <header className="fixed top-0 left-0 right-0 z-50 h-[68px] bg-[#FAF9F6]/75 backdrop-blur-md border-b border-[#E0DCD3]/90 transition-all duration-300 border-2">
+      <div className="max-w-7xl mx-auto h-full px-8 md:px-16 lg:px-24 flex items-center justify-between relative">
         {/* Brand Logo (Left) */}
         <div className="flex items-center z-10">
           <button
             onClick={() => onGoToSection(0)}
-            className="font-sans text-base font-bold tracking-tight text-[#111110] flex items-center gap-1 group cursor-pointer"
+            className="flex items-center gap-2.5 group cursor-pointer"
+            aria-label="Go to top"
           >
-            <span>Shoaib</span>
-            <span className="text-[#14A800] text-lg leading-none transition-transform duration-200 group-hover:scale-125">
-              .
+            {/* Inline SVG logo — matches favicon */}
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 64 64"
+              className="w-8 h-8 shrink-0"
+              aria-hidden="true"
+            >
+              <defs>
+                <linearGradient id="hdr-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stopColor="#18181B" />
+                  <stop offset="100%" stopColor="#09090B" />
+                </linearGradient>
+                <linearGradient id="hdr-s" x1="0%" y1="0%" x2="0%" y2="100%">
+                  <stop offset="0%" stopColor="#FFFFFF" />
+                  <stop offset="100%" stopColor="#F4F4F5" />
+                </linearGradient>
+                <filter id="hdr-glow" x="-50%" y="-50%" width="200%" height="200%">
+                  <feGaussianBlur stdDeviation="1.5" result="blur" />
+                  <feMerge>
+                    <feMergeNode in="blur" />
+                    <feMergeNode in="SourceGraphic" />
+                  </feMerge>
+                </filter>
+              </defs>
+              <rect x="2" y="2" width="60" height="60" rx="16" fill="url(#hdr-bg)" stroke="#2E2E32" strokeWidth="1.5" />
+              <path
+                d="M37.5 21 C36 18.5 33.2 17.2 29.5 17.2 C24.2 17.2 20.5 20.5 20.5 25.4 C20.5 33 33.5 31.8 33.5 37.6 C33.5 40.8 30.6 42.5 26.8 42.5 C22.4 42.5 19.5 39.8 18.5 36.8"
+                fill="none"
+                stroke="url(#hdr-s)"
+                strokeWidth="5.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+              <circle cx="43" cy="41" r="4.2" fill="#14A800" filter="url(#hdr-glow)" />
+            </svg>
+            <span className="font-sans text-sm font-bold tracking-tight text-[#111110] group-hover:text-[#111110] transition-colors">
+              Shoaib<span className="text-[#14A800] transition-transform duration-200 inline-block group-hover:scale-125">.</span>
             </span>
           </button>
         </div>
+
 
         {/* Desktop Navigation Links (Centered with Fluid Sliding Pill) */}
         <nav
@@ -84,17 +120,15 @@ export function Header({ currentSection, onGoToSection }: HeaderProps) {
                 }}
                 key={s.id}
                 onClick={() => onGoToSection(i)}
-                className={`relative z-10 font-sans text-xs px-3.5 py-1.5 rounded-full transition-colors duration-200 flex items-center gap-1.5 cursor-pointer select-none ${
-                  isActive
-                    ? "text-[#F9F8F5] font-medium"
-                    : "text-[#3D3C38] hover:text-[#111110]"
-                }`}
+                className={`relative z-10 font-sans text-xs px-3.5 py-1.5 rounded-full transition-colors duration-200 flex items-center gap-1.5 cursor-pointer select-none ${isActive
+                  ? "text-[#F9F8F5] font-medium"
+                  : "text-[#3D3C38] hover:text-[#111110]"
+                  }`}
                 aria-current={isActive ? "page" : undefined}
               >
                 <span
-                  className={`font-mono text-[10px] tracking-wider transition-colors duration-200 ${
-                    isActive ? "text-[#14A800] font-semibold" : "text-[#8C8B87]"
-                  }`}
+                  className={`font-mono text-[10px] tracking-wider transition-colors duration-200 ${isActive ? "text-[#14A800] font-semibold" : "text-[#8C8B87]"
+                    }`}
                 >
                   {s.num}
                 </span>
@@ -141,11 +175,10 @@ export function Header({ currentSection, onGoToSection }: HeaderProps) {
                   onGoToSection(i)
                   setMobileMenuOpen(false)
                 }}
-                className={`w-full font-sans text-xs font-medium px-4 py-2.5 rounded-lg flex items-center justify-between transition-colors ${
-                  isActive
-                    ? "bg-[#181817] text-[#F9F8F5]"
-                    : "text-[#3D3C38] hover:bg-[#F2F1ED] hover:text-[#111110]"
-                }`}
+                className={`w-full font-sans text-xs font-medium px-4 py-2.5 rounded-lg flex items-center justify-between transition-colors ${isActive
+                  ? "bg-[#181817] text-[#F9F8F5]"
+                  : "text-[#3D3C38] hover:bg-[#F2F1ED] hover:text-[#111110]"
+                  }`}
               >
                 <span>{s.label}</span>
                 <span className={`font-mono text-[10px] tracking-[0.06em] ${isActive ? "text-[#14A800]" : "text-[#706E68]"}`}>

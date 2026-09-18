@@ -9,7 +9,7 @@ interface AdminDashboardClientProps {
   initialData: SiteData
 }
 
-type TabType = "profile" | "projects" | "experience" | "seo"
+type TabType = "profile" | "projects" | "experience" | "seo" | "security"
 
 export function AdminDashboardClient({ initialData }: AdminDashboardClientProps) {
   const [data, setData] = useState<SiteData>(initialData)
@@ -117,41 +117,77 @@ export function AdminDashboardClient({ initialData }: AdminDashboardClientProps)
       )}
 
       {/* Top Navbar */}
-      <header className="sticky top-0 z-40 bg-[#FFFFFF] border-b border-[#E5E3DE] px-6 md:px-12 h-[68px] flex items-center justify-between">
-        <div className="flex items-center gap-4">
-          <Link href="/admin" className="font-sans text-base font-bold tracking-tight text-[#111110] flex items-center gap-1.5">
-            <span>Shoaib</span>
-            <span className="text-[#14A800]">.</span>
-            <span className="font-mono text-xs font-normal text-[#8C8B87] ml-1 bg-[#F2F1ED] px-2 py-0.5 rounded border border-[#E5E3DE]">
-              Admin Studio
-            </span>
+      <header className="sticky top-0 z-40 bg-[#FFFFFF] border-b border-[#E5E3DE] h-[68px] flex items-center">
+        <div className="max-w-7xl mx-auto w-full px-6 md:px-12 flex items-center justify-between">
+          {/* Logo */}
+          <Link href="/admin" className="flex items-center gap-3 group">
+            {/* Inline SVG — mirrors the favicon exactly */}
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 64 64"
+              className="w-9 h-9 shrink-0"
+              aria-hidden="true"
+            >
+              <defs>
+                <linearGradient id="adm-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stopColor="#18181B" />
+                  <stop offset="100%" stopColor="#09090B" />
+                </linearGradient>
+                <linearGradient id="adm-s" x1="0%" y1="0%" x2="0%" y2="100%">
+                  <stop offset="0%" stopColor="#FFFFFF" />
+                  <stop offset="100%" stopColor="#F4F4F5" />
+                </linearGradient>
+                <filter id="adm-glow" x="-50%" y="-50%" width="200%" height="200%">
+                  <feGaussianBlur stdDeviation="1.5" result="blur" />
+                  <feMerge>
+                    <feMergeNode in="blur" />
+                    <feMergeNode in="SourceGraphic" />
+                  </feMerge>
+                </filter>
+              </defs>
+              <rect x="2" y="2" width="60" height="60" rx="16" fill="url(#adm-bg)" stroke="#2E2E32" strokeWidth="1.5" />
+              <path
+                d="M37.5 21 C36 18.5 33.2 17.2 29.5 17.2 C24.2 17.2 20.5 20.5 20.5 25.4 C20.5 33 33.5 31.8 33.5 37.6 C33.5 40.8 30.6 42.5 26.8 42.5 C22.4 42.5 19.5 39.8 18.5 36.8"
+                fill="none"
+                stroke="url(#adm-s)"
+                strokeWidth="5.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+              <circle cx="43" cy="41" r="4.2" fill="#14A800" filter="url(#adm-glow)" />
+            </svg>
+            <div className="leading-none">
+              <p className="font-sans text-sm font-bold tracking-tight text-[#111110]">
+                Shoaib<span className="text-[#14A800]">.</span>
+              </p>
+              <p className="font-mono text-[10px] text-[#8C8B87] mt-0.5">Admin Studio</p>
+            </div>
           </Link>
-          <span className="hidden sm:inline-flex items-center gap-1.5 font-mono text-[11px] text-[#14A800] bg-[#14A800]/10 px-2 py-0.5 rounded">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#14A800] animate-pulse" />
-            Live Sync
-          </span>
-        </div>
 
-        <div className="flex items-center gap-3">
-          <Link
-            href="/"
-            target="_blank"
-            className="text-xs font-sans font-medium text-[#54534F] hover:text-[#111110] px-3 py-1.5 rounded border border-[#E5E3DE] hover:bg-[#F2F1ED] transition-colors inline-flex items-center gap-1"
-          >
-            <span>Live Portfolio</span>
-            <span className="font-mono text-[10px]">↗</span>
-          </Link>
-          <button
-            onClick={handleLogout}
-            className="text-xs font-mono text-[#8C8B87] hover:text-red-600 px-3 py-1.5 transition-colors cursor-pointer"
-          >
-            Logout
-          </button>
+          {/* Right actions */}
+          <div className="flex items-center gap-3">
+            <Link
+              href="/"
+              target="_blank"
+              className="text-xs font-sans font-medium text-[#54534F] hover:text-[#111110] px-3 py-1.5 rounded border border-[#E5E3DE] hover:bg-[#F2F1ED] transition-colors inline-flex items-center gap-1"
+            >
+              <span>Live Portfolio</span>
+              <span className="font-mono text-[10px]">↗</span>
+            </Link>
+            <button
+              onClick={handleLogout}
+              className="text-xs font-mono text-[#8C8B87] hover:text-red-600 px-3 py-1.5 transition-colors cursor-pointer"
+            >
+              Logout
+            </button>
+          </div>
         </div>
       </header>
 
       {/* Subnav Tabs */}
-      <div className="bg-[#FFFFFF] border-b border-[#E5E3DE] px-6 md:px-12 sticky top-[68px] z-30 flex gap-2 overflow-x-auto">
+      <div className="bg-[#FFFFFF] border-b border-[#E5E3DE] sticky top-[68px] z-30 overflow-x-auto">
+        <div className="max-w-7xl mx-auto px-6 md:px-12 flex gap-2">
+
         <button
           onClick={() => setActiveTab("projects")}
           className={`py-3 px-3.5 text-xs font-medium border-b-2 transition-colors cursor-pointer flex items-center gap-2 ${
@@ -196,8 +232,21 @@ export function AdminDashboardClient({ initialData }: AdminDashboardClientProps)
               : "border-transparent text-[#54534F] hover:text-[#111110]"
           }`}
         >
-          SEO & Social Metadata
+          SEO &amp; Social Metadata
         </button>
+
+        <button
+          onClick={() => setActiveTab("security")}
+          className={`py-3 px-3.5 text-xs font-medium border-b-2 transition-colors cursor-pointer flex items-center gap-1.5 ${
+            activeTab === "security"
+              ? "border-[#111110] text-[#111110]"
+              : "border-transparent text-[#54534F] hover:text-[#111110]"
+          }`}
+        >
+          <span>Security</span>
+          <span className="font-mono text-[9px] px-1 py-0.5 rounded bg-amber-100 text-amber-700">🔑</span>
+        </button>
+        </div>{/* end max-w container */}
       </div>
 
       {/* Main Content Area */}
@@ -328,6 +377,11 @@ export function AdminDashboardClient({ initialData }: AdminDashboardClientProps)
             saving={saving}
             onSave={(updatedSEO) => handleSave({ seo: updatedSEO })}
           />
+        )}
+
+        {/* TAB 5: SECURITY */}
+        {activeTab === "security" && (
+          <ChangePasswordForm showToast={showToast} />
         )}
       </main>
 
@@ -586,7 +640,7 @@ function ProfileTabForm({
   }
 
   return (
-    <form onSubmit={handleSubmit} className="max-w-3xl space-y-6 bg-[#FFFFFF] border border-[#E3E1DB] p-8 rounded-[4px] shadow-sm">
+    <form onSubmit={handleSubmit} className="w-full space-y-6 bg-[#FFFFFF] border border-[#E3E1DB] p-8 rounded-[4px] shadow-sm">
       <div className="border-b border-[#EAE8E2] pb-4">
         <h2 className="text-xl font-semibold text-[#111110]">Hero & Profile Content</h2>
         <p className="text-xs text-[#54534F] mt-0.5">
@@ -841,7 +895,7 @@ function ExperienceTabForm({
   }
 
   return (
-    <div className="max-w-4xl space-y-8">
+    <div className="w-full space-y-8">
       {/* Experience History */}
       <div className="bg-[#FFFFFF] border border-[#E3E1DB] p-6 sm:p-8 rounded-[4px] shadow-sm space-y-6">
         <div className="flex items-center justify-between border-b border-[#EAE8E2] pb-4">
@@ -972,7 +1026,7 @@ function SEOTabForm({
   }
 
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 max-w-6xl">
+    <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 w-full">
       {/* Form Column */}
       <form onSubmit={handleSubmit} className="lg:col-span-7 bg-[#FFFFFF] border border-[#E3E1DB] p-6 sm:p-8 rounded-[4px] shadow-sm space-y-5 text-xs">
         <div className="border-b border-[#EAE8E2] pb-4">
@@ -1105,6 +1159,174 @@ function SEOTabForm({
           </div>
         </div>
       </div>
+    </div>
+  )
+}
+
+/* ─── Change Password Form ─── */
+function ChangePasswordForm({ showToast }: { showToast: (msg: string) => void }) {
+  const [currentPassword, setCurrentPassword] = useState("")
+  const [newPassword, setNewPassword] = useState("")
+  const [confirmPassword, setConfirmPassword] = useState("")
+  const [changing, setChanging] = useState(false)
+  const [showCurrent, setShowCurrent] = useState(false)
+  const [showNew, setShowNew] = useState(false)
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault()
+
+    if (newPassword !== confirmPassword) {
+      alert("New password and confirmation do not match.")
+      return
+    }
+
+    if (newPassword.length < 8) {
+      alert("New password must be at least 8 characters.")
+      return
+    }
+
+    setChanging(true)
+    try {
+      const res = await fetch("/api/admin/change-password", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ currentPassword, newPassword }),
+      })
+
+      const data = await res.json()
+      if (!res.ok) throw new Error(data.error || "Password change failed.")
+
+      showToast("Password updated! Restart the server for it to take effect.")
+      setCurrentPassword("")
+      setNewPassword("")
+      setConfirmPassword("")
+    } catch (err: unknown) {
+      const msg = err instanceof Error ? err.message : "Error changing password."
+      alert(msg)
+    } finally {
+      setChanging(false)
+    }
+  }
+
+  const strength = newPassword.length === 0 ? null
+    : newPassword.length < 8 ? "weak"
+    : newPassword.length < 12 ? "medium"
+    : "strong"
+
+  const strengthColor = { weak: "bg-red-400", medium: "bg-amber-400", strong: "bg-[#14A800]" }
+  const strengthWidth = { weak: "w-1/3", medium: "w-2/3", strong: "w-full" }
+
+  return (
+    <div className="w-full space-y-6">
+      <div className="pb-4 border-b border-[#EAE8E2]">
+        <h2 className="text-xl font-semibold text-[#111110]">Security Settings</h2>
+        <p className="text-xs text-[#54534F] mt-0.5">
+          Change your admin panel password. The new password is saved to your <code className="font-mono bg-[#F2F1ED] px-1 rounded">.env.local</code> file.
+        </p>
+      </div>
+
+      {/* Info banner */}
+      <div className="flex items-start gap-3 p-4 rounded-[4px] bg-amber-50 border border-amber-200 text-xs text-amber-800">
+        <span className="text-base mt-0.5">⚠️</span>
+        <div>
+          <p className="font-semibold mb-0.5">Heads up — dev server restart required</p>
+          <p>After changing your password the app reads it fresh on restart. Run <code className="font-mono bg-amber-100 px-1 rounded">npm run dev</code> again once saved.</p>
+          <p className="mt-1">For Vercel, also update <span className="font-semibold">ADMIN_PASSWORD</span> in your project&apos;s Environment Variables.</p>
+        </div>
+      </div>
+
+      <form
+        onSubmit={handleSubmit}
+        className="bg-[#FFFFFF] border border-[#E3E1DB] rounded-[4px] p-8 shadow-sm space-y-5 text-xs"
+      >
+        {/* Current Password */}
+        <div>
+          <label className="font-mono text-[#54534F] block mb-1">Current Password</label>
+          <div className="relative">
+            <input
+              type={showCurrent ? "text" : "password"}
+              required
+              value={currentPassword}
+              onChange={(e) => setCurrentPassword(e.target.value)}
+              className="w-full p-2.5 pr-10 bg-[#F9F8F5] border border-[#E3E1DB] rounded text-sm text-[#111110] focus:outline-none focus:border-[#111110]"
+              placeholder="Enter current password"
+            />
+            <button
+              type="button"
+              onClick={() => setShowCurrent((v) => !v)}
+              className="absolute right-3 top-1/2 -translate-y-1/2 text-[#8C8B87] hover:text-[#111110] cursor-pointer text-sm"
+            >
+              {showCurrent ? "🙈" : "👁"}
+            </button>
+          </div>
+        </div>
+
+        {/* New Password */}
+        <div>
+          <label className="font-mono text-[#54534F] block mb-1">New Password</label>
+          <div className="relative">
+            <input
+              type={showNew ? "text" : "password"}
+              required
+              minLength={8}
+              value={newPassword}
+              onChange={(e) => setNewPassword(e.target.value)}
+              className="w-full p-2.5 pr-10 bg-[#F9F8F5] border border-[#E3E1DB] rounded text-sm text-[#111110] focus:outline-none focus:border-[#111110]"
+              placeholder="Min. 8 characters"
+            />
+            <button
+              type="button"
+              onClick={() => setShowNew((v) => !v)}
+              className="absolute right-3 top-1/2 -translate-y-1/2 text-[#8C8B87] hover:text-[#111110] cursor-pointer text-sm"
+            >
+              {showNew ? "🙈" : "👁"}
+            </button>
+          </div>
+          {/* Strength bar */}
+          {strength && (
+            <div className="mt-2 space-y-1">
+              <div className="h-1 bg-[#EAE8E2] rounded-full overflow-hidden">
+                <div className={`h-full rounded-full transition-all duration-300 ${strengthColor[strength]} ${strengthWidth[strength]}`} />
+              </div>
+              <p className={`text-[10px] font-mono capitalize ${
+                strength === "weak" ? "text-red-500" : strength === "medium" ? "text-amber-600" : "text-[#14A800]"
+              }`}>
+                {strength} password
+              </p>
+            </div>
+          )}
+        </div>
+
+        {/* Confirm Password */}
+        <div>
+          <label className="font-mono text-[#54534F] block mb-1">Confirm New Password</label>
+          <input
+            type="password"
+            required
+            value={confirmPassword}
+            onChange={(e) => setConfirmPassword(e.target.value)}
+            className={`w-full p-2.5 bg-[#F9F8F5] border rounded text-sm text-[#111110] focus:outline-none transition-colors ${
+              confirmPassword && confirmPassword !== newPassword
+                ? "border-red-400 focus:border-red-400"
+                : "border-[#E3E1DB] focus:border-[#111110]"
+            }`}
+            placeholder="Re-enter new password"
+          />
+          {confirmPassword && confirmPassword !== newPassword && (
+            <p className="text-[10px] font-mono text-red-500 mt-1">Passwords do not match</p>
+          )}
+        </div>
+
+        <div className="pt-2 flex justify-end">
+          <button
+            type="submit"
+            disabled={changing || (!!confirmPassword && confirmPassword !== newPassword)}
+            className="btn-primary text-xs py-2.5 px-6 cursor-pointer disabled:opacity-50"
+          >
+            {changing ? "Updating Password..." : "Update Password ✓"}
+          </button>
+        </div>
+      </form>
     </div>
   )
 }
